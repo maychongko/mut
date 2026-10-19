@@ -2,7 +2,7 @@
 
 Landing page for a 6-week entrepreneurship bootcamp for women in Germany.
 
-**Live site:** _(deploy fills this in)_ `https://<username>.github.io/foundher/`
+**Live site:** https://maychongko.github.io/foundher/
 
 ## Edit workflow
 The whole site is one file: `index.html` (design, content, logic — no build step).
