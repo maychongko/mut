@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoundHer — The 6-week bootcamp for women founding businesses in Germany</title>
+<meta name="description" content="FoundHer is a part-time, 6-week bootcamp for women in Germany. Validate your idea, crack the German paperwork, and launch a registered business — with mentors who've done it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B3304E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-size='38' fill='%23FAF6EF' text-anchor='middle'%3EF.%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#FAF6EF;
+  --bg-card:#FFFDF8;
+  --ink:#221B15;
+  --ink-soft:#5D5348;
+  --ink-faint:#8A7F72;
+  --accent:#B3304E;
+  --accent-dark:#8E2240;
+  --accent-soft:#F6E3E7;
+  --gold:#C98F2D;
+  --green:#3E7A5E;
+  --green-soft:#E4EFE7;
+  --line:rgba(34,27,21,.12);
+  --line-soft:rgba(34,27,21,.07);
+  --shadow:0 1px 2px rgba(34,27,21,.05),0 16px 40px -18px rgba(34,27,21,.18);
+  --radius:20px;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16.5px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+section{scroll-margin-top:88px}
+::selection{background:var(--accent);color:#fff}
+
+/* ============ TYPE HELPERS ============ */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em}
+.h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:14px 0 18px}
+.h2 em,.h1 em{font-style:italic;color:var(--accent);font-weight:500}
+.lede{color:var(--ink-soft);font-size:clamp(1.02rem,1.4vw,1.16rem);max-width:640px}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:700;font-size:15.5px;padding:15px 28px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:#FFF8F2;box-shadow:0 10px 24px -10px rgba(179,48,78,.55)}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(179,48,78,.6)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-light{background:var(--bg);color:var(--ink)}
+.btn-light:hover{transform:translateY(-2px)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(4px)}
+
+/* ============ NAV ============ */
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .25s}
+header.scrolled{border-bottom-color:var(--line-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em}
+.logo-mark{width:36px;height:36px;border-radius:11px;background:var(--accent);color:#FFF8F2;display:grid;place-items:center;font-style:italic;font-size:19px;font-weight:600}
+.logo span i{font-style:italic;color:var(--accent);font-weight:500}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:14.5px;font-weight:600;color:var(--ink-soft)}
+.nav-links a:not(.btn):hover{color:var(--ink)}
+.nav-links .btn{padding:11px 22px;font-size:14.5px}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-btn span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;transition:.25s}
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:10px 24px 22px;border-top:1px solid var(--line-soft);background:var(--bg)}
+.mobile-menu a{padding:12px 4px;font-weight:600;color:var(--ink-soft);border-bottom:1px solid var(--line-soft)}
+.mobile-menu .btn{margin-top:12px;border-bottom:none}
+.mobile-menu.open{display:flex}
+
+/* ============ HERO ============ */
+.hero{position:relative;overflow:hidden;padding:72px 0 84px}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(34,27,21,.05) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:9px;background:var(--bg-card);border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 10px;font-size:13.5px;font-weight:600;color:var(--ink-soft);box-shadow:0 1px 2px rgba(34,27,21,.04)}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3.5px var(--green-soft);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3.5px var(--green-soft)}50%{box-shadow:0 0 0 6px var(--green-soft)}}
+.h1{font-size:clamp(2.5rem,5.4vw,4.15rem);margin:22px 0 20px}
+.hero-sub{color:var(--ink-soft);font-size:clamp(1.03rem,1.4vw,1.17rem);max-width:540px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.hero-meta{font-size:13.5px;font-weight:600;color:var(--ink-faint);letter-spacing:.02em}
+
+/* Hero visual — document stack */
+.hero-visual{position:relative;min-height:460px}
+.blob{position:absolute;border-radius:50%;filter:blur(6px);z-index:0}
+.blob-a{width:340px;height:340px;right:-30px;top:-20px;background:radial-gradient(circle at 35% 35%,rgba(179,48,78,.16),rgba(179,48,78,0) 70%)}
+.blob-b{width:300px;height:300px;left:-40px;bottom:-30px;background:radial-gradient(circle at 60% 40%,rgba(201,143,45,.18),rgba(201,143,45,0) 70%)}
+.doc{position:absolute;z-index:1;top:44px;left:50%;transform:translateX(-58%) rotate(-2.5deg);width:min(330px,88%);background:var(--bg-card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:26px 26px 30px}
+.doc-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed var(--line);padding-bottom:13px;margin-bottom:15px}
+.doc-head small{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+.doc h3{font-size:21px;font-weight:600}
+.doc-row{display:flex;justify-content:space-between;gap:14px;font-size:13.8px;padding:7px 0;color:var(--ink-soft);border-bottom:1px solid var(--line-soft)}
+.doc-row b{color:var(--ink);font-weight:600}
+.doc-status{display:flex;align-items:center;gap:8px;margin-top:16px;background:var(--green-soft);color:var(--green);font-weight:700;font-size:13.5px;border-radius:9px;padding:9px 13px}
+.stamp{position:absolute;right:16px;bottom:14px;width:86px;height:86px;border:2.5px solid var(--accent);border-radius:50%;display:grid;place-items:center;text-align:center;transform:rotate(12deg);color:var(--accent);font-weight:800;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;opacity:.85;background:rgba(255,253,248,.6)}
+.chip-card{position:absolute;z-index:2;background:var(--bg-card);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);padding:13px 17px;font-size:13.2px;font-weight:600;display:flex;align-items:center;gap:10px}
+.chip-card small{display:block;font-weight:500;color:var(--ink-faint);font-size:11.5px}
+.chip-1{top:6px;right:-8px;transform:rotate(2deg)}
+.chip-2{bottom:66px;right:6px;transform:rotate(-1.5deg)}
+.chip-3{bottom:-6px;left:-6px;transform:rotate(1.5deg)}
+.chip-ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:16px;background:var(--accent-soft);flex-shrink:0}
+.chip-3 .chip-ico{background:#F3E8D4}
+.chip-2 .chip-ico{background:var(--green-soft)}
+
+/* ============ STATS ============ */
+.stats{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:var(--bg-card)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 22px;text-align:center;border-left:1px solid var(--line-soft)}
+.stat:first-child{border-left:none}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(1.7rem,2.6vw,2.2rem);font-weight:600;letter-spacing:-.01em}
+.stat b i{font-style:italic;color:var(--accent);font-weight:500}
+.stat span{font-size:13px;font-weight:600;color:var(--ink-faint);letter-spacing:.04em}
+
+/* ============ MARQUEE ============ */
+.marquee{background:var(--accent);color:#FFF3EA;overflow:hidden;padding:15px 0;transform:rotate(0deg)}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 26s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-track span{font-family:var(--serif);font-style:italic;font-size:17px;font-weight:500;white-space:nowrap;padding:0 26px;position:relative}
+.mq-track span::after{content:"✳";position:absolute;right:-7px;opacity:.55;font-style:normal;font-size:13px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============ SECTIONS ============ */
+.section{padding:96px 0}
+.section-head{max-width:660px;margin-bottom:52px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head.center .eyebrow{justify-content:center}
+.section-head.center .eyebrow::before{display:none}
+.section-head.center .lede{margin:0 auto}
+
+/* Who cards */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.who-card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;transition:transform .22s ease,box-shadow .22s ease}
+.who-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.who-emoji{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:24px;margin-bottom:20px}
+.who-card:nth-child(1) .who-emoji{background:var(--accent-soft)}
+.who-card:nth-child(2) .who-emoji{background:#F3E8D4}
+.who-card:nth-child(3) .who-emoji{background:var(--green-soft)}
+.who-card h3{font-size:22.5px;margin-bottom:12px}
+.who-card p{color:var(--ink-soft);font-size:15px}
+
+/* Curriculum */
+#curriculum{background:var(--bg-card);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.week{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px 26px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
+.week:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(179,48,78,.35)}
+.week-num{font-family:var(--serif);font-style:italic;font-size:15px;font-weight:600;color:var(--accent);letter-spacing:.02em;display:block;margin-bottom:10px}
+.week h3{font-size:21.5px;margin-bottom:11px}
+.week ul{list-style:none;margin:0 0 16px}
+.week li{position:relative;padding:4.5px 0 4.5px 22px;color:var(--ink-soft);font-size:14.3px}
+.week li::before{content:"—";position:absolute;left:0;color:var(--accent);font-weight:700}
+.week-out{display:flex;gap:8px;align-items:flex-start;font-size:13px;font-weight:600;color:var(--ink);background:var(--accent-soft);border-radius:10px;padding:10px 13px;line-height:1.45}
+.week-out::before{content:"✓";color:var(--accent);font-weight:800}
+
+/* Format */
+.fmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:26px}
+.fmt-card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px}
+.fmt-tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:7px;padding:5px 10px;margin-bottom:16px}
+.fmt-card h3{font-size:20px;margin-bottom:10px}
+.fmt-card p{color:var(--ink-soft);font-size:14.5px}
+.fmt-note{display:flex;gap:12px;align-items:center;background:var(--green-soft);border-radius:14px;padding:16px 20px;font-size:14.5px;font-weight:600;color:var(--green)}
+.fmt-note .ic{font-size:19px}
+
+/* Mentors */
+.mentor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mentor{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;text-align:center}
+.avatar{width:76px;height:76px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;font-family:var(--serif);font-size:26px;font-weight:600;color:#FFF8F2}
+.mentor:nth-child(1) .avatar{background:var(--accent)}
+.mentor:nth-child(2) .avatar{background:var(--gold)}
+.mentor:nth-child(3) .avatar{background:#4E6E8E}
+.mentor h3{font-size:20px;margin-bottom:3px}
+.mentor .role{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.mentor p{color:var(--ink-soft);font-size:14px}
+.mentor q{display:block;margin-top:14px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink)}
+
+/* Testimonials */
+#voices{background:var(--ink);color:#F6EFE6}
+#voices .eyebrow{color:#E8A9BC}
+#voices .eyebrow::before{background:#E8A9BC}
+#voices .h2{color:#FBF7EF}
+#voices .h2 em{color:#E8A9BC}
+.quote-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.quote{background:rgba(255,253,248,.05);border:1px solid rgba(255,253,248,.14);border-radius:var(--radius);padding:34px 32px}
+.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.5;margin-bottom:20px;color:#FBF7EF}
+.quote p::before{content:"“";color:#E8A9BC;margin-right:2px}
+.quote p::after{content:"”";color:#E8A9BC}
+.quote footer{font-size:13.5px;font-weight:600;color:rgba(246,239,230,.65)}
+.quote footer b{color:#E8A9BC;font-weight:700}
+
+/* Pricing + apply */
+#apply .price-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:start}
+.price-card{background:var(--bg-card);border:1px solid var(--line);border-radius:22px;padding:36px 34px;box-shadow:var(--shadow)}
+.price-card.featured{background:var(--ink);color:#F6EFE6;border-color:transparent;position:relative;overflow:hidden}
+.price-card.featured::after{content:"BEST VALUE";position:absolute;top:20px;right:-34px;transform:rotate(38deg);background:var(--gold);color:var(--ink);font-size:10.5px;font-weight:800;letter-spacing:.12em;padding:5px 40px}
+.price-lab{font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px}
+.price-card.featured .price-lab{color:#E8A9BC}
+.price-num{font-family:var(--serif);font-size:52px;font-weight:600;letter-spacing:-.02em;line-height:1;margin-bottom:4px}
+.price-num sup{font-size:24px;font-weight:500}
+.price-note{font-size:13.5px;color:var(--ink-faint);margin-bottom:22px;font-weight:500}
+.price-card.featured .price-note{color:rgba(246,239,230,.6)}
+.incl{list-style:none;margin-bottom:24px}
+.incl li{position:relative;padding:6.5px 0 6.5px 28px;font-size:14.5px;color:var(--ink-soft)}
+.price-card.featured .incl li{color:rgba(246,239,230,.85)}
+.incl li::before{content:"✓";position:absolute;left:0;top:6.5px;width:18px;height:18px;border-radius:50%;background:var(--green-soft);color:var(--green);font-size:11px;font-weight:800;display:grid;place-items:center}
+.price-card.featured .incl li::before{background:rgba(232,169,188,.18);color:#E8A9BC}
+.schol{margin-top:18px;padding-top:18px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink-soft)}
+.price-card.featured .schol{border-top-color:rgba(246,239,230,.2);color:rgba(246,239,230,.7)}
+.schol b{color:var(--accent)}
+.price-card.featured .schol b{color:#E8A9BC}
+
+/* Form */
+.form-card{background:var(--bg-card);border:1px solid var(--line);border-radius:22px;padding:38px 36px;box-shadow:var(--shadow)}
+.form-card h3{font-size:26px;margin-bottom:6px}
+.form-card .sub{font-size:14.5px;color:var(--ink-soft);margin-bottom:26px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f-group{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.f-group label{font-size:13px;font-weight:700;letter-spacing:.02em}
+.f-group input,.f-group select,.f-group textarea{font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;transition:border-color .18s,box-shadow .18s;width:100%}
+.f-group textarea{resize:vertical;min-height:92px}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3.5px rgba(179,48,78,.13)}
+.f-err{font-size:12.5px;color:var(--accent-dark);font-weight:600;display:none}
+.f-group.invalid input,.f-group.invalid select{border-color:var(--accent-dark)}
+.f-group.invalid .f-err{display:block}
+.form-card .btn{width:100%;margin-top:6px}
+.form-fine{font-size:12.5px;color:var(--ink-faint);text-align:center;margin-top:14px}
+.success{display:none;text-align:center;padding:44px 20px}
+.success.show{display:block}
+.success .big{width:74px;height:74px;border-radius:50%;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:34px;margin:0 auto 20px}
+.success h3{font-size:26px;margin-bottom:10px}
+.success p{color:var(--ink-soft);font-size:15px;max-width:380px;margin:0 auto}
+.success .sig{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--accent)}
+
+/* Countdown */
+.count{background:var(--accent);color:#FFF3EA;padding:44px 0}
+.count-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
+.count-title{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;max-width:380px}
+.count-title b{font-style:normal;font-weight:600;display:block;font-size:12px;font-family:var(--sans);letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-bottom:6px}
+.cd-grid{display:flex;gap:14px}
+.cd-cell{background:rgba(255,248,242,.13);border:1px solid rgba(255,248,242,.22);border-radius:14px;min-width:84px;padding:14px 10px;text-align:center}
+.cd-cell b{display:block;font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.cd-cell span{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+
+/* FAQ */
+.faq-list{max-width:780px;margin:0 auto}
+.faq{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:border-color .2s}
+.faq.open{border-color:rgba(179,48,78,.4)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;background:none;border:none;cursor:pointer;padding:21px 24px;font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);text-align:left}
+.faq-q .plus{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:15px;font-weight:600;color:var(--accent);transition:transform .25s,background .2s,border-color .2s}
+.faq.open .plus{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:#FFF8F2}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 24px 22px;color:var(--ink-soft);font-size:14.8px;max-width:680px}
+
+/* Final CTA */
+.final{background:var(--ink);color:#F6EFE6;padding:110px 0;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(179,48,78,.28),transparent 65%);top:-200px;right:-140px}
+.final::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(201,143,45,.16),transparent 65%);bottom:-190px;left:-120px}
+.final .container{position:relative;z-index:1}
+.final h2{font-size:clamp(2rem,4.4vw,3.3rem);max-width:780px;margin:0 auto 18px}
+.final h2 em{font-style:italic;color:#E8A9BC;font-weight:500}
+.final p{color:rgba(246,239,230,.72);max-width:540px;margin:0 auto 34px;font-size:16.5px}
+.final .mail{display:inline-block;margin-top:22px;font-size:14.5px;color:rgba(246,239,230,.6)}
+.final .mail a{color:#E8A9BC;font-weight:600;border-bottom:1px solid rgba(232,169,188,.4)}
+.final .mail a:hover{border-bottom-color:#E8A9BC}
+
+/* Footer */
+footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-size:13.5px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.foot .logo{font-size:18px;color:#F6EFE6}
+.foot-links{display:flex;gap:24px;font-weight:600}
+.foot-links a:hover{color:#F6EFE6}
+.foot-mut{font-family:var(--serif);font-style:italic;color:rgba(246,239,230,.4)}
+
+/* Reveal animation */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .mq-track{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{min-height:420px;max-width:520px;margin:0 auto;width:100%}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:none}
+  .stat:nth-child(n+3){border-top:1px solid var(--line-soft)}
+  .who-grid,.weeks,.fmt-grid,.mentor-grid,#apply .price-grid{grid-template-columns:1fr}
+  .quote-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .menu-btn{display:block}
+}
+@media (max-width:640px){
+  .section{padding:68px 0}
+  .hero{padding:46px 0 60px}
+  .f-row{grid-template-columns:1fr}
+  .cd-grid{width:100%;justify-content:space-between;gap:8px}
+  .cd-cell{min-width:0;flex:1;padding:12px 6px}
+  .cd-cell b{font-size:24px}
+  .price-card,.form-card{padding:28px 22px}
+  .chip-2{right:-4px}
+  .doc{transform:translateX(-50%) rotate(-2.5deg)}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header id="header">
+  <div class="container nav">
+    <a class="logo" href="#top" aria-label="FoundHer home">
+      <span class="logo-mark">F.</span>
+      <span>Found<i>Her</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#who">For whom</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#format">Format</a>
+      <a href="#mentors">Mentors</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="#apply">Apply — Cohort 03</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="#who">For whom</a>
+    <a href="#curriculum">Curriculum</a>
+    <a href="#format">Format</a>
+    <a href="#mentors">Mentors</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-primary" href="#apply">Apply — Cohort 03</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge"><span class="dot"></span> Applications open · Cohort 03 starts 19 Jan 2027</span>
+      <h1 class="h1">From idea to <em>registered business</em> — in six weeks.</h1>
+      <p class="hero-sub">FoundHer is a part-time bootcamp for women in Germany who are done waiting. Validate your idea, crack the German paperwork, and walk out with a business that's real — registered, priced, and pitched.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#apply">Apply for Cohort 03 <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#curriculum">See the 6 weeks</a>
+      </div>
+      <p class="hero-meta">Part-time &nbsp;·&nbsp; English-first &nbsp;·&nbsp; Berlin + Düsseldorf + live online</p>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+
+      <div class="doc">
+        <div class="doc-head">
+          <small>Gewerbeamt · Düsseldorf</small>
+          <small>№ 2027/0119</small>
+        </div>
+        <h3>Gewerbeanmeldung</h3>
+        <div class="doc-row"><span>Inhaberin</span><b>You ✓</b></div>
+        <div class="doc-row"><span>Tätigkeit</span><b>Founder</b></div>
+        <div class="doc-row"><span>Rechtsform</span><b>Kleinunternehmerin</b></div>
+        <div class="doc-row"><span>Steuer</span><b>§19 UStG — no VAT juggling</b></div>
+        <div class="doc-status">✓ Angenommen — see you at Demo Day</div>
+        <div class="stamp">FOUNDED<br>·<br>2027</div>
+      </div>
+
+      <div class="chip-card chip-1">
+        <div class="chip-ico">🧾</div>
+        <div>First invoice sent<small>+ €1,450 this month</small></div>
+      </div>
+      <div class="chip-card chip-2">
+        <div class="chip-ico">📝</div>
+        <div>Paperwork pack filed<small>Gewerbe · Steuer · insurance</small></div>
+      </div>
+      <div class="chip-card chip-3">
+        <div class="chip-ico">🎤</div>
+        <div>Demo Day ticket<small>27 Feb 2027 · on stage</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><b>6 <i>weeks</i></b><span>part-time, designed around a job</span></div>
+    <div class="stat"><b>18 <i>sessions</i></b><span>live evenings + Saturday workshops</span></div>
+    <div class="stat"><b>12 <i>seats</i></b><span>small cohort, real relationships</span></div>
+    <div class="stat"><b>2 <i>scholarships</i></b><span>impact seats, every cohort</span></div>
+  </div>
+</div>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>MUT</span><span>Gründerin</span><span>Neuanfang</span><span>By founders — for founders</span><span>Gewerbe? Gewerblich.</span><span>Made in Germany</span>
+    <span>MUT</span><span>Gründerin</span><span>Neuanfang</span><span>By founders — for founders</span><span>Gewerbe? Gewerblich.</span><span>Made in Germany</span>
+  </div>
+</div>
+
+<!-- ============ WHO ============ -->
+<section class="section" id="who">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">01 · Who it's for</span>
+      <h2 class="h2">You'll recognize yourself in <em>at least one</em> of these.</h2>
+      <p class="lede">FoundHer works best for women at the very beginning — idea-stage or almost-registered. Not yet for scaling a seven-figure GmbH.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card rv">
+        <div class="who-emoji">📝</div>
+        <h3>The Maybe-Someday</h3>
+        <p>The idea has lived in your notes app for two years. You don't need more motivation — you need a deadline, a structure, and eleven women who notice when you don't show up.</p>
+      </div>
+      <div class="who-card rv" data-d="1">
+        <div class="who-emoji">💼</div>
+        <h3>The Side-Hustler</h3>
+        <p>You have a job, a payslip, and a quiet feeling there's more. We'll show you how to found <i>nebenberuflich</i> — safely, legally, step by step, without torching your contract.</p>
+      </div>
+      <div class="who-card rv" data-d="2">
+        <div class="who-emoji">🌍</div>
+        <h3>The New-in-Germany</h3>
+        <p>New country, new rules. Gewerbe? Freiberufler? Kleinunternehmerregelung? We translate German bureaucracy into plain English — with the forms, in the right order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CURRICULUM ============ -->
+<section class="section" id="curriculum">
+  <div class="container">
+    <div class="section-head center rv">
+      <span class="eyebrow">02 · Curriculum</span>
+      <h2 class="h2">Six weeks. One <em>registered, revenue-ready</em> business.</h2>
+      <p class="lede">Every week ends with a concrete deliverable. By Demo Day you hold a filed (or filing-ready) registration, a price list, and a pitch you've actually given.</p>
+    </div>
+    <div class="weeks">
+      <div class="week rv">
+        <span class="week-num">Week 01 — Decide</span>
+        <h3>From idea fog to one idea</h3>
+        <ul>
+          <li>Skills → idea mapping, the German market lens</li>
+          <li>Kill your three worst ideas (on purpose)</li>
+          <li>Cohort match: your accountability trio</li>
+        </ul>
+        <div class="week-out">One-idea one-pager you'd bet a Saturday on.</div>
+      </div>
+      <div class="week rv" data-d="1">
+        <span class="week-num">Week 02 — Validate</span>
+        <h3>Evidence, not compliments</h3>
+        <ul>
+          <li>10 real customer conversations (scripted)</li>
+          <li>A €0 landing-page demand test</li>
+          <li>Go / pivot / kill — decided with data</li>
+        </ul>
+        <div class="week-out">A validation folder: what people will pay for, and proof.</div>
+      </div>
+      <div class="week rv" data-d="2">
+        <span class="week-num">Week 03 — Earn</span>
+        <h3>Pricing & the money math</h3>
+        <ul>
+          <li>Value-based pricing for German customers</li>
+          <li>Revenue math: break-even, runway, side-income</li>
+          <li>Your first offer, written and priced</li>
+        </ul>
+        <div class="week-out">A price list and one offer you can sell this month.</div>
+      </div>
+      <div class="week rv">
+        <span class="week-num">Week 04 — Register</span>
+        <h3>German paperwork, demystified</h3>
+        <ul>
+          <li>Gewerbe vs. Freiberufler — which one are you?</li>
+          <li>Kleinunternehmerregelung, taxes, insurance</li>
+          <li>Visa & residence-permit map for non-EU founders</li>
+        </ul>
+        <div class="week-out">A paperwork pack ready to file — forms filled, in order.</div>
+      </div>
+      <div class="week rv" data-d="1">
+        <span class="week-num">Week 05 — Show up</span>
+        <h3>Brand & first customers</h3>
+        <ul>
+          <li>Positioning: the one sentence you're known for</li>
+          <li>Simple site + presence that doesn't take months</li>
+          <li>The outreach engine: 20 warm conversations</li>
+        </ul>
+        <div class="week-out">A launch-ready presence and your first outreach batch sent.</div>
+      </div>
+      <div class="week rv" data-d="2">
+        <span class="week-num">Week 06 — Launch</span>
+        <h3>Pitch & Demo Day</h3>
+        <ul>
+          <li>Your 3-minute pitch, rehearsed with feedback</li>
+          <li>The 90-day plan after the bootcamp</li>
+          <li>Demo Day: on stage, in front of a real room</li>
+        </ul>
+        <div class="week-out">A pitch on stage — and a community that answers at 11pm.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMAT ============ -->
+<section class="section" id="format">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">03 · Format</span>
+      <h2 class="h2">A rhythm you can keep — <em>beside</em> a job, kids, and a life.</h2>
+      <p class="lede">Part-time by design. Two evenings and one Saturday per week, plus 2–4 focused hours in between. Everything is recorded, everything in English first.</p>
+    </div>
+    <div class="fmt-grid">
+      <div class="fmt-card rv">
+        <span class="fmt-tag">Tue + Thu · 19:00–21:00</span>
+        <h3>Live evening sessions</h3>
+        <p>Teaching + hot-seat coaching on Zoom. Cameras on, egos off. Your questions get answered live — not in a forum, next week.</p>
+      </div>
+      <div class="fmt-card rv" data-d="1">
+        <span class="fmt-tag">Saturdays · 10:00–14:00</span>
+        <h3>In-person workshops</h3>
+        <p>Hands-on workdays in Berlin & Düsseldorf (streamed if you're far). This is where ideas stop being theoretical — and where friendships start.</p>
+      </div>
+      <div class="fmt-card rv" data-d="2">
+        <span class="fmt-tag">In between</span>
+        <h3>Templates & doing the work</h3>
+        <p>Bilingual templates for everything: interview scripts, invoice, contract, pitch deck. You don't start from a blank page. Ever.</p>
+      </div>
+    </div>
+    <div class="fmt-note rv">
+      <span class="ic">🎥</span>
+      Life happens — kids get sick, jobs get busy. Every session is recorded, and your trio catches you up. Nobody falls out quietly.
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENTORS ============ -->
+<section class="section" id="mentors">
+  <div class="container">
+    <div class="section-head center rv">
+      <span class="eyebrow">04 · Mentors</span>
+      <h2 class="h2">Mentors who've <em>actually done it</em> — in Germany.</h2>
+      <p class="lede">Not keynote speakers. Practitioners who register businesses, file taxes, and win customers in the German market — and teach you exactly how.</p>
+    </div>
+    <div class="mentor-grid">
+      <div class="mentor rv">
+        <div class="avatar">AS</div>
+        <h3>Dr. Anke Sommer</h3>
+        <div class="role">Tax & Legal · Steuerberaterin</div>
+        <p>Walked 400+ founders through their first Gewerbeanmeldung. Decodes the Finanzamt so you can sleep.</p>
+        <q>Taxes. Only funnier.</q>
+      </div>
+      <div class="mentor rv" data-d="1">
+        <div class="avatar">MO</div>
+        <h3>Marlene Okafor</h3>
+        <div class="role">Brand & First Customers</div>
+        <p>Founded two D2C brands in Berlin. Teaches positioning and outreach that gets replies — without ad budgets.</p>
+        <q>Your first 10 customers don't come from ads.</q>
+      </div>
+      <div class="mentor rv" data-d="2">
+        <div class="avatar">SK</div>
+        <h3>Sina Katz</h3>
+        <div class="role">Funding & Grants</div>
+        <p>Coach for Gründungszuschuss, EXIST and KfW programs. Free money exists — she knows which forms unlock it.</p>
+        <q>Germany will fund your idea. Seriously.</q>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="voices">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">05 · Voices</span>
+      <h2 class="h2">Cohort 02, <em>six months later.</em></h2>
+    </div>
+    <div class="quote-grid">
+      <div class="quote rv">
+        <p>I arrived with a folder of screenshots and a half-written plan. Six weeks later I had a registered Gewerbe and my first three paying clients.</p>
+        <footer><b>Priya R.</b> · Career coach · Cohort 02 · Leipzig</footer>
+      </div>
+      <div class="quote rv" data-d="1">
+        <p>Week 4 alone was worth the price. Nine years in Germany, and finally someone explained the Kleinunternehmerregelung in plain English.</p>
+        <footer><b>Amara D.</b> · Catering & events · Cohort 02 · Berlin</footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING + APPLY ============ -->
+<section class="section" id="apply">
+  <div class="container">
+    <div class="section-head center rv">
+      <span class="eyebrow">06 · Apply</span>
+      <h2 class="h2">One price. <em>Everything</em> in.</h2>
+      <p class="lede">Cohort 03 · 19 January – 27 February 2027 · 12 seats. Applications close 15 December 2026.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card featured rv">
+        <div class="price-lab">Early Bird · until 30 Nov</div>
+        <div class="price-num">€490<sup>*</sup></div>
+        <div class="price-note">* or 3 × €165/month — no extra cost. From 1 Dec: €690.</div>
+        <ul class="incl">
+          <li>All 18 live sessions + all Saturday workshops</li>
+          <li>Bilingual template pack (invoice, contract, pitch deck, forms)</li>
+          <li>Weekly hot-seat coaching on your exact situation</li>
+          <li>Demo Day on stage + invite-only alumnae network</li>
+          <li>Partner perks: tax software, co-working days, legal check</li>
+        </ul>
+        <div class="schol"><b>2 scholarship seats</b> per cohort for women who need them. Write "scholarship" in your application — no drama, no forms theater.</div>
+      </div>
+
+      <div class="form-card rv" data-d="1" id="formCard">
+        <h3>Request your seat</h3>
+        <p class="sub">Two minutes. We read every application personally and reply within 48 hours.</p>
+        <form id="applyForm" novalidate>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="fName">Full name</label>
+              <input id="fName" type="text" autocomplete="name" placeholder="Jane Doe">
+              <span class="f-err">Please tell us your name.</span>
+            </div>
+            <div class="f-group">
+              <label for="fEmail">Email</label>
+              <input id="fEmail" type="email" autocomplete="email" placeholder="jane@email.de">
+              <span class="f-err">That email doesn't look right.</span>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="fCity">City</label>
+              <input id="fCity" type="text" autocomplete="address-level2" placeholder="Düsseldorf">
+              <span class="f-err">Where are you based?</span>
+            </div>
+            <div class="f-group">
+              <label for="fStage">Where are you right now?</label>
+              <select id="fStage">
+                <option value="">Choose…</option>
+                <option>Idea & research</option>
+                <option>Already earning on the side</option>
+                <option>Ready to register</option>
+                <option>Registered — now grow</option>
+              </select>
+              <span class="f-err">Pick the closest fit.</span>
+            </div>
+          </div>
+          <div class="f-group">
+            <label for="fMsg">Anything we should know? <span style="font-weight:500;color:var(--ink-faint)">(optional)</span></label>
+            <textarea id="fMsg" placeholder="Scholarship? Kids on Saturdays? A question you want answered first?"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send application <span class="arr">→</span></button>
+          <p class="form-fine">No spam, no newsletter avalanche. Just one personal reply.</p>
+        </form>
+        <div class="success" id="successBox">
+          <div class="big">✓</div>
+          <h3>Application received.</h3>
+          <p>Thank you — we read every single application personally and you'll hear from us within 48 hours.</p>
+          <div class="sig">— The FoundHer team</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTDOWN ============ -->
+<div class="count">
+  <div class="container count-inner">
+    <div class="count-title"><b>Cohort 03 · 12 seats</b>Applications close 15 December 2026 — the early bird closes even sooner.</div>
+    <div class="cd-grid" id="cdGrid" role="timer" aria-label="Time until applications close">
+      <div class="cd-cell"><b id="cdD">--</b><span>days</span></div>
+      <div class="cd-cell"><b id="cdH">--</b><span>hrs</span></div>
+      <div class="cd-cell"><b id="cdM">--</b><span>min</span></div>
+      <div class="cd-cell"><b id="cdS">--</b><span>sec</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head center rv">
+      <span class="eyebrow">07 · FAQ</span>
+      <h2 class="h2">Fair questions. <em>Direct answers.</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq rv">
+        <button class="faq-q" aria-expanded="false">Do I need a business idea already?<span class="plus">+</span></button>
+        <div class="faq-a"><p>No — about a third of every cohort arrives with "a few half-ideas." Week 1 exists exactly for this: you'll map your skills to the German market, kill weak ideas early, and leave with one idea you can actually test. What you do need is seriousness: 6–8 hours a week for six weeks.</p></div>
+      </div>
+      <div class="faq rv">
+        <button class="faq-q" aria-expanded="false">Is it in English or German?<span class="plus">+</span></button>
+        <div class="faq-a"><p>English-first — sessions, materials, and community. All templates come bilingually (EN/DE) because the Finanzamt doesn't do English. Several mentors teach in both languages, and every German bureaucratic term is explained in plain English before you ever touch a form.</p></div>
+      </div>
+      <div class="faq rv">
+        <button class="faq-q" aria-expanded="false">Can I join while employed full-time?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — the program is built for it. Most of our founders start nebenberuflich (part-time self-employed alongside a job). We cover what your employment contract might allow, how to found cleanly, and how Gründungszuschuss works if you're registered as unemployed and planning to found.</p></div>
+      </div>
+      <div class="faq rv">
+        <button class="faq-q" aria-expanded="false">I'm not an EU citizen. Can I still found a business in Germany?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Often yes — it depends on your residence permit. Week 4 includes a clear map of which permits allow self-employment and what the steps look like. We're not immigration lawyers, but you'll leave knowing exactly which questions to ask, at which Amt, with which documents.</p></div>
+      </div>
+      <div class="faq rv">
+        <button class="faq-q" aria-expanded="false">What if I miss a session — kids, work, life?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Every session is recorded with notes and templates. Your accountability trio keeps you moving, and mentors answer async questions between sessions. Saturday workshops are in-person in Berlin & Düsseldorf but always streamed. Cohort 02's highest attendance? A mom of two.</p></div>
+      </div>
+      <div class="faq rv">
+        <button class="faq-q" aria-expanded="false">What if it's not for me — refunds?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Full refund until two weeks before Cohort 03 starts (5 Jan 2027), no questions, no forms theater. After that, you can switch to the next cohort once, free. We'd rather have a founder in the right cohort than a payment in the wrong one.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="container">
+    <h2 class="rv">Next January you're either still thinking about it — or <em>you've founded.</em></h2>
+    <p class="rv">Cohort 03 starts 19 January 2027. Twelve women. Six weeks. One registered business — yours.</p>
+    <a class="btn btn-light rv" href="#apply">Apply for Cohort 03 <span class="arr">→</span></a>
+    <div class="mail">Questions first? <a href="mailto:hello@foundher.eu">hello@foundher.eu</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="container foot">
+    <a class="logo" href="#top"><span class="logo-mark">F.</span> <span>Found<i>Her</i></span></a>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#curriculum">Curriculum</a>
+      <a href="#faq">FAQ</a>
+      <a href="#apply">Apply</a>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </nav>
+    <div>© <span id="year">2026</span> FoundHer · <span class="foot-mut">Made with MUT in Düsseldorf</span></div>
+  </div>
+</footer>
+
+<script>
+// ---------- Nav: scroll border + mobile menu ----------
+var header = document.getElementById('header');
+window.addEventListener('scroll', function() {
+  header.classList.toggle('scrolled', window.scrollY > 8);
+}, { passive: true });
+
+var menuBtn = document.getElementById('menuBtn');
+var mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', function() {
+  var open = mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+mobileMenu.querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// ---------- FAQ accordion ----------
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.parentElement;
+    var body = item.querySelector('.faq-a');
+    var isOpen = item.classList.contains('open');
+    // close others
+    document.querySelectorAll('.faq.open').forEach(function(o) {
+      o.classList.remove('open');
+      o.querySelector('.faq-a').style.maxHeight = null;
+      o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ---------- Reveal on scroll ----------
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      var d = parseInt(e.target.getAttribute('data-d') || '0', 10);
+      e.target.style.transitionDelay = (d * 90) + 'ms';
+      e.target.classList.add('in');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.rv').forEach(function(el) { observer.observe(el); });
+
+// ---------- Countdown to application deadline ----------
+var deadline = new Date('2026-12-15T23:59:59+01:00').getTime();
+function pad(n) { return String(n).padStart(2, '0'); }
+function tick() {
+  var diff = deadline - Date.now();
+  var el = { d: document.getElementById('cdD'), h: document.getElementById('cdH'), m: document.getElementById('cdM'), s: document.getElementById('cdS') };
+  if (diff <= 0) {
+    document.getElementById('cdGrid').innerHTML = '<div class="cd-cell" style="padding:16px 22px"><b>Closed</b><span>join waitlist</span></div>';
+    return;
+  }
+  el.d.textContent = Math.floor(diff / 86400000);
+  el.h.textContent = pad(Math.floor(diff / 3600000) % 24);
+  el.m.textContent = pad(Math.floor(diff / 60000) % 60);
+  el.s.textContent = pad(Math.floor(diff / 1000) % 60);
+  setTimeout(tick, 1000);
+}
+tick();
+
+// ---------- Application form ----------
+var form = document.getElementById('applyForm');
+form.addEventListener('submit', function(ev) {
+  ev.preventDefault();
+  var ok = true;
+  function need(id, test) {
+    var input = document.getElementById(id);
+    var group = input.closest('.f-group');
+    var valid = test(input.value.trim());
+    group.classList.toggle('invalid', !valid);
+    if (!valid) ok = false;
+  }
+  need('fName', function(v) { return v.length > 1; });
+  need('fEmail', function(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); });
+  need('fCity', function(v) { return v.length > 0; });
+  need('fStage', function(v) { return v.length > 0; });
+  if (!ok) return;
+
+  var application = {
+    name: document.getElementById('fName').value.trim(),
+    email: document.getElementById('fEmail').value.trim(),
+    city: document.getElementById('fCity').value.trim(),
+    stage: document.getElementById('fStage').value,
+    message: document.getElementById('fMsg').value.trim(),
+    at: new Date().toISOString()
+  };
+  try {
+    var all = JSON.parse(localStorage.getItem('foundher_applications') || '[]');
+    all.push(application);
+    localStorage.setItem('foundher_applications', JSON.stringify(all));
+  } catch (e) { /* storage unavailable — still show success */ }
+
+  form.style.display = 'none';
+  document.getElementById('successBox').classList.add('show');
+});
+// clear error state while typing
+document.querySelectorAll('#applyForm input, #applyForm select').forEach(function(el) {
+  el.addEventListener('input', function() {
+    el.closest('.f-group').classList.remove('invalid');
+  });
+});
+
+// ---------- Year ----------
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
