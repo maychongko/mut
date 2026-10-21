@@ -846,9 +846,9 @@ form.addEventListener('submit', function(ev) {
     at: new Date().toISOString()
   };
   try {
-    var all = JSON.parse(localStorage.getItem('foundher_applications') || '[]');
+    var all = JSON.parse(localStorage.getItem('mut_applications') || '[]');
     all.push(application);
-    localStorage.setItem('foundher_applications', JSON.stringify(all));
+    localStorage.setItem('mut_applications', JSON.stringify(all));
   } catch (e) { /* storage unavailable — still show success */ }
 
   form.style.display = 'none';
