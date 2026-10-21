@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUT — Intrapreneurship programs for organizations in Germany</title>
-<meta name="description" content="MUT In-Company is a 6-week intrapreneurship program for organizations in Germany. Your people validate real venture ideas with real customers — and pitch funded business cases to management.">
+<title>MUT — The AI-Powered Venture Building Sprint for Professionals in Germany</title>
+<meta name="description" content="MUT is a premium 6-week, part-time AI-venture sprint for corporate leaders and intrapreneurs in Germany. Purpose Canvas to live MVP with ChatGPT, Claude, and no-code — the upskilling your employer approves.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B3304E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-size='38' fill='%23FAF6EF' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +56,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacin
 .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
 .btn-light{background:var(--bg);color:var(--ink)}
 .btn-light:hover{transform:translateY(-2px)}
+.btn-sm{padding:11px 20px;font-size:14px}
 .btn .arr{transition:transform .2s}
 .btn:hover .arr{transform:translateX(4px)}
 
@@ -65,9 +66,9 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em}
 .logo-mark{width:36px;height:36px;border-radius:11px;background:var(--accent);color:#FFF8F2;display:grid;place-items:center;font-style:italic;font-size:19px;font-weight:600}
-.nav-links{display:flex;align-items:center;gap:30px;font-size:14.5px;font-weight:600;color:var(--ink-soft)}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:14.5px;font-weight:600;color:var(--ink-soft)}
 .nav-links a:not(.btn):hover{color:var(--ink)}
-.nav-links .btn{padding:11px 22px;font-size:14.5px}
+.nav-links .btn{padding:11px 20px;font-size:14px}
 .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .menu-btn span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;transition:.25s}
 .mobile-menu{display:none;flex-direction:column;gap:4px;padding:10px 24px 22px;border-top:1px solid var(--line-soft);background:var(--bg)}
@@ -82,13 +83,13 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .badge{display:inline-flex;align-items:center;gap:9px;background:var(--bg-card);border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 10px;font-size:13.5px;font-weight:600;color:var(--ink-soft);box-shadow:0 1px 2px rgba(34,27,21,.04)}
 .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3.5px var(--green-soft);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 3.5px var(--green-soft)}50%{box-shadow:0 0 0 6px var(--green-soft)}}
-.h1{font-size:clamp(2.5rem,5.4vw,4.15rem);margin:22px 0 20px}
-.hero-sub{color:var(--ink-soft);font-size:clamp(1.03rem,1.4vw,1.17rem);max-width:560px;margin-bottom:32px}
+.h1{font-size:clamp(2.4rem,5.2vw,4rem);margin:22px 0 20px}
+.hero-sub{color:var(--ink-soft);font-size:clamp(1.03rem,1.4vw,1.17rem);max-width:580px;margin-bottom:30px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
 .hero-meta{font-size:13.5px;font-weight:600;color:var(--ink-faint);letter-spacing:.02em}
 
-/* Hero visual — venture brief */
-.hero-visual{position:relative;min-height:460px}
+/* Hero visual — sprint passport */
+.hero-visual{position:relative;min-height:470px}
 .blob{position:absolute;border-radius:50%;filter:blur(6px);z-index:0}
 .blob-a{width:340px;height:340px;right:-30px;top:-20px;background:radial-gradient(circle at 35% 35%,rgba(179,48,78,.16),rgba(179,48,78,0) 70%)}
 .blob-b{width:300px;height:300px;left:-40px;bottom:-30px;background:radial-gradient(circle at 60% 40%,rgba(201,143,45,.18),rgba(201,143,45,0) 70%)}
@@ -96,11 +97,11 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .doc-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed var(--line);padding-bottom:13px;margin-bottom:15px}
 .doc-head small{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
 .doc h3{font-size:21px;font-weight:600}
-.doc-row{display:flex;justify-content:space-between;gap:14px;font-size:13.8px;padding:7px 0;color:var(--ink-soft);border-bottom:1px solid var(--line-soft)}
+.doc-row{display:flex;justify-content:space-between;gap:14px;font-size:13.4px;padding:7px 0;color:var(--ink-soft);border-bottom:1px solid var(--line-soft)}
 .doc-row b{color:var(--ink);font-weight:600}
-.doc-status{display:flex;align-items:center;gap:8px;margin-top:16px;background:var(--green-soft);color:var(--green);font-weight:700;font-size:13.5px;border-radius:9px;padding:9px 13px}
-.stamp{position:absolute;right:16px;bottom:14px;width:86px;height:86px;border:2.5px solid var(--accent);border-radius:50%;display:grid;place-items:center;text-align:center;transform:rotate(12deg);color:var(--accent);font-weight:800;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;opacity:.85;background:rgba(255,253,248,.6)}
-.chip-card{position:absolute;z-index:2;background:var(--bg-card);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);padding:13px 17px;font-size:13.2px;font-weight:600;display:flex;align-items:center;gap:10px}
+.doc-status{display:flex;align-items:center;gap:8px;margin-top:16px;background:var(--green-soft);color:var(--green);font-weight:700;font-size:13px;border-radius:9px;padding:9px 13px}
+.stamp{position:absolute;right:16px;bottom:14px;width:88px;height:88px;border:2.5px solid var(--accent);border-radius:50%;display:grid;place-items:center;text-align:center;transform:rotate(12deg);color:var(--accent);font-weight:800;font-size:9px;letter-spacing:.12em;text-transform:uppercase;line-height:1.5;opacity:.85;background:rgba(255,253,248,.6)}
+.chip-card{position:absolute;z-index:2;background:var(--bg-card);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);padding:13px 17px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:10px}
 .chip-card small{display:block;font-weight:500;color:var(--ink-faint);font-size:11.5px}
 .chip-1{top:6px;right:-8px;transform:rotate(2deg)}
 .chip-2{bottom:66px;right:6px;transform:rotate(-1.5deg)}
@@ -114,13 +115,13 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:30px 22px;text-align:center;border-left:1px solid var(--line-soft)}
 .stat:first-child{border-left:none}
-.stat b{display:block;font-family:var(--serif);font-size:clamp(1.7rem,2.6vw,2.2rem);font-weight:600;letter-spacing:-.01em}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.1rem);font-weight:600;letter-spacing:-.01em}
 .stat b i{font-style:italic;color:var(--accent);font-weight:500}
 .stat span{font-size:13px;font-weight:600;color:var(--ink-faint);letter-spacing:.04em}
 
 /* ============ MARQUEE ============ */
 .marquee{background:var(--accent);color:#FFF3EA;overflow:hidden;padding:15px 0}
-.mq-track{display:flex;gap:0;width:max-content;animation:mq 26s linear infinite}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 28s linear infinite}
 .marquee:hover .mq-track{animation-play-state:paused}
 .mq-track span{font-family:var(--serif);font-style:italic;font-size:17px;font-weight:500;white-space:nowrap;padding:0 26px;position:relative}
 .mq-track span::after{content:"✳";position:absolute;right:-7px;opacity:.55;font-style:normal;font-size:13px}
@@ -134,15 +135,16 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .section-head.center .eyebrow::before{display:none}
 .section-head.center .lede{margin:0 auto}
 
-/* Who cards */
-.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.who-card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;transition:transform .22s ease,box-shadow .22s ease}
+/* Who cards — 2×2 */
+.who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.who-card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;transition:transform .22s ease,box-shadow .22s ease}
 .who-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .who-emoji{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:24px;margin-bottom:20px}
 .who-card:nth-child(1) .who-emoji{background:var(--accent-soft)}
 .who-card:nth-child(2) .who-emoji{background:#F3E8D4}
 .who-card:nth-child(3) .who-emoji{background:var(--green-soft)}
-.who-card h3{font-size:22.5px;margin-bottom:12px}
+.who-card:nth-child(4) .who-emoji{background:#E8EAF2}
+.who-card h3{font-size:22px;margin-bottom:12px}
 .who-card p{color:var(--ink-soft);font-size:15px}
 
 /* Program weeks */
@@ -151,35 +153,76 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .week{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px 26px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
 .week:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(179,48,78,.35)}
 .week-num{font-family:var(--serif);font-style:italic;font-size:15px;font-weight:600;color:var(--accent);letter-spacing:.02em;display:block;margin-bottom:10px}
-.week h3{font-size:21.5px;margin-bottom:11px}
+.week h3{font-size:21px;margin-bottom:11px}
 .week ul{list-style:none;margin:0 0 16px}
-.week li{position:relative;padding:4.5px 0 4.5px 22px;color:var(--ink-soft);font-size:14.3px}
+.week li{position:relative;padding:4.5px 0 4.5px 22px;color:var(--ink-soft);font-size:14.2px}
 .week li::before{content:"—";position:absolute;left:0;color:var(--accent);font-weight:700}
+.week li b{color:var(--ink);font-weight:600}
 .week-out{display:flex;gap:8px;align-items:flex-start;font-size:13px;font-weight:600;color:var(--ink);background:var(--accent-soft);border-radius:10px;padding:10px 13px;line-height:1.45}
 .week-out::before{content:"✓";color:var(--accent);font-weight:800}
 
-/* Formats */
-.fmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:26px}
-.fmt-card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column}
-.fmt-tag{display:inline-block;align-self:flex-start;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:7px;padding:5px 10px;margin-bottom:16px}
-.fmt-card h3{font-size:20px;margin-bottom:10px}
-.fmt-card p{color:var(--ink-soft);font-size:14.5px;flex:1}
-.fmt-price{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:13.5px;font-weight:700;color:var(--ink)}
-.fmt-price span{display:block;font-weight:500;color:var(--ink-faint);font-size:12.5px;margin-top:2px}
-.fmt-note{display:flex;gap:12px;align-items:center;background:var(--green-soft);border-radius:14px;padding:16px 20px;font-size:14.5px;font-weight:600;color:var(--green)}
-.fmt-note .ic{font-size:19px}
+/* Pricing */
+#pricing{background:var(--bg)}
+.price-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start;margin-bottom:30px}
+.price-card{background:var(--bg-card);border:1px solid var(--line);border-radius:22px;padding:36px 34px;box-shadow:var(--shadow)}
+.price-card.featured{background:var(--ink);color:#F6EFE6;border-color:transparent;position:relative;overflow:hidden}
+.price-card.featured::after{content:"MOST SEATS ARE SPONSORED";position:absolute;top:22px;right:-36px;transform:rotate(36deg);background:var(--gold);color:var(--ink);font-size:10px;font-weight:800;letter-spacing:.1em;padding:5px 42px}
+.price-lab{font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px}
+.price-card.featured .price-lab{color:#E8A9BC}
+.price-num{font-family:var(--serif);font-size:52px;font-weight:600;letter-spacing:-.02em;line-height:1;margin-bottom:4px}
+.price-note{font-size:13.5px;color:var(--ink-faint);margin-bottom:22px;font-weight:500}
+.price-card.featured .price-note{color:rgba(246,239,230,.65)}
+.incl{list-style:none;margin-bottom:24px}
+.incl li{position:relative;padding:6.5px 0 6.5px 28px;font-size:14.5px;color:var(--ink-soft)}
+.price-card.featured .incl li{color:rgba(246,239,230,.85)}
+.incl li::before{content:"✓";position:absolute;left:0;top:6.5px;width:18px;height:18px;border-radius:50%;background:var(--green-soft);color:var(--green);font-size:11px;font-weight:800;display:grid;place-items:center}
+.price-card.featured .incl li::before{background:rgba(232,169,188,.18);color:#E8A9BC}
+.sponsor-tease{margin-top:18px;padding-top:18px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink-soft)}
+.price-card.featured .sponsor-tease{border-top-color:rgba(246,239,230,.2);color:rgba(246,239,230,.75)}
+.sponsor-tease b{color:var(--accent)}
+.price-card.featured .sponsor-tease b{color:#E8A9BC}
 
-/* Mentors */
-.mentor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.mentor{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;text-align:center}
-.avatar{width:76px;height:76px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;font-family:var(--serif);font-size:26px;font-weight:600;color:#FFF8F2}
+/* Team formats (compact) */
+.team-card{background:var(--bg-card);border:1px solid var(--line);border-radius:22px;padding:34px 32px}
+.team-card h3{font-size:23px;margin-bottom:6px}
+.team-card .sub{font-size:14px;color:var(--ink-soft);margin-bottom:22px}
+.tfmt{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.tfmt:last-of-type{border-bottom:none}
+.tfmt .n{font-size:15px;font-weight:700}
+.tfmt .d{display:block;font-size:12.8px;color:var(--ink-faint);font-weight:500;margin-top:2px}
+.tfmt .p{font-family:var(--serif);font-size:16.5px;font-weight:600;white-space:nowrap}
+.team-card .btn{margin-top:20px;width:100%}
+
+/* Sponsorship template */
+#sponsorship .wrap{max-width:860px;margin:0 auto}
+.mail-card{background:var(--bg-card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.mail-top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 24px;background:var(--bg);border-bottom:1px solid var(--line-soft);flex-wrap:wrap}
+.mail-top .dots{display:flex;gap:6px}
+.mail-top .dots i{width:11px;height:11px;border-radius:50%;background:var(--line);display:block}
+.mail-top .t{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.mail-actions{display:flex;gap:10px;flex-wrap:wrap}
+.mail-meta{padding:18px 26px 0;font-size:14px;color:var(--ink-soft)}
+.mail-meta div{padding:3px 0}
+.mail-meta b{color:var(--ink);font-weight:600}
+.mail-body{padding:16px 26px 26px;font-size:14.6px;color:var(--ink-soft);line-height:1.65}
+.mail-body p{margin:0 0 12px}
+.mail-body ul{margin:0 0 12px 18px}
+.mail-body li{margin:4px 0}
+.mail-body .ph{color:var(--accent);font-weight:600}
+.spon-note{display:flex;gap:12px;align-items:flex-start;background:var(--green-soft);border-radius:14px;padding:16px 20px;font-size:14.3px;font-weight:600;color:var(--green);margin-top:22px}
+
+/* Mentors — 2×2 */
+.mentor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:920px;margin:0 auto}
+.mentor{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 30px;display:flex;gap:22px;align-items:flex-start;text-align:left}
+.avatar{width:64px;height:64px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-family:var(--serif);font-size:22px;font-weight:600;color:#FFF8F2}
 .mentor:nth-child(1) .avatar{background:var(--accent)}
 .mentor:nth-child(2) .avatar{background:var(--gold)}
 .mentor:nth-child(3) .avatar{background:#4E6E8E}
+.mentor:nth-child(4) .avatar{background:var(--ink)}
 .mentor h3{font-size:20px;margin-bottom:3px}
-.mentor .role{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.mentor .role{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
 .mentor p{color:var(--ink-soft);font-size:14px}
-.mentor q{display:block;margin-top:14px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink)}
+.mentor q{display:block;margin-top:10px;font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--ink)}
 
 /* Testimonials */
 #voices{background:var(--ink);color:#F6EFE6}
@@ -189,14 +232,14 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 #voices .h2 em{color:#E8A9BC}
 .quote-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .quote{background:rgba(255,253,248,.05);border:1px solid rgba(255,253,248,.14);border-radius:var(--radius);padding:34px 32px}
-.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.5;margin-bottom:20px;color:#FBF7EF}
+.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(1.08rem,1.6vw,1.28rem);line-height:1.5;margin-bottom:20px;color:#FBF7EF}
 .quote p::before{content:"“";color:#E8A9BC;margin-right:2px}
 .quote p::after{content:"”";color:#E8A9BC}
 .quote footer{font-size:13.5px;font-weight:600;color:rgba(246,239,230,.65)}
 .quote footer b{color:#E8A9BC;font-weight:700}
 
 /* Contact */
-#contact .price-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:start}
+#contact .price-grid{grid-template-columns:.92fr 1.08fr}
 .steps-card{background:var(--ink);color:#F6EFE6;border-radius:22px;padding:38px 36px;box-shadow:var(--shadow)}
 .steps-card h3{font-size:26px;margin-bottom:6px;color:#FBF7EF}
 .steps-card .sub{font-size:14.5px;color:rgba(246,239,230,.7);margin-bottom:26px}
@@ -228,7 +271,7 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .success.show{display:block}
 .success .big{width:74px;height:74px;border-radius:50%;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:34px;margin:0 auto 20px}
 .success h3{font-size:26px;margin-bottom:10px}
-.success p{color:var(--ink-soft);font-size:15px;max-width:380px;margin:0 auto}
+.success p{color:var(--ink-soft);font-size:15px;max-width:400px;margin:0 auto}
 .success .sig{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--accent)}
 
 /* FAQ */
@@ -246,7 +289,7 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .final::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(179,48,78,.28),transparent 65%);top:-200px;right:-140px}
 .final::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(201,143,45,.16),transparent 65%);bottom:-190px;left:-120px}
 .final .container{position:relative;z-index:1}
-.final h2{font-size:clamp(2rem,4.4vw,3.3rem);max-width:820px;margin:0 auto 18px}
+.final h2{font-size:clamp(2rem,4.4vw,3.3rem);max-width:840px;margin:0 auto 18px}
 .final h2 em{font-style:italic;color:#E8A9BC;font-weight:500}
 .final p{color:rgba(246,239,230,.72);max-width:560px;margin:0 auto 34px;font-size:16.5px}
 .final .mail{display:inline-block;margin-top:22px;font-size:14.5px;color:rgba(246,239,230,.6)}
@@ -260,6 +303,10 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 .foot-links{display:flex;gap:24px;font-weight:600}
 .foot-links a:hover{color:#F6EFE6}
 .foot-mut{font-family:var(--serif);font-style:italic;color:rgba(246,239,230,.4)}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#FBF7EF;font-size:14.5px;font-weight:600;padding:13px 22px;border-radius:999px;box-shadow:0 12px 30px -8px rgba(34,27,21,.4);opacity:0;transition:transform .3s ease,opacity .3s ease;z-index:99;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 
 /* Reveal animation */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
@@ -277,8 +324,7 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(3){border-left:none}
   .stat:nth-child(n+3){border-top:1px solid var(--line-soft)}
-  .who-grid,.weeks,.fmt-grid,.mentor-grid,#contact .price-grid{grid-template-columns:1fr}
-  .quote-grid{grid-template-columns:1fr}
+  .who-grid,.weeks,#pricing .price-grid,.mentor-grid,.quote-grid,#contact .price-grid{grid-template-columns:1fr}
   .nav-links{display:none}
   .menu-btn{display:block}
 }
@@ -286,7 +332,8 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   .section{padding:68px 0}
   .hero{padding:46px 0 60px}
   .f-row{grid-template-columns:1fr}
-  .price-card,.form-card,.steps-card{padding:28px 22px}
+  .price-card,.form-card,.steps-card,.team-card{padding:28px 22px}
+  .mentor{flex-direction:column;text-align:center;align-items:center}
   .chip-2{right:-4px}
   .doc{transform:translateX(-50%) rotate(-2.5deg)}
 }
@@ -304,10 +351,10 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#who">For whom</a>
       <a href="#program">Program</a>
-      <a href="#formats">Formats</a>
+      <a href="#pricing">Pricing</a>
       <a href="#mentors">Mentors</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call</a>
+      <a class="btn btn-primary" href="#pricing">Reserve your seat</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -316,10 +363,10 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
     <a href="#who">For whom</a>
     <a href="#program">Program</a>
-    <a href="#formats">Formats</a>
+    <a href="#pricing">Pricing</a>
     <a href="#mentors">Mentors</a>
     <a href="#faq">FAQ</a>
-    <a class="btn btn-primary" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call</a>
+    <a class="btn btn-primary" href="#pricing">Reserve your seat</a>
   </nav>
 </header>
 
@@ -329,14 +376,14 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="badge"><span class="dot"></span> Booking Q1 2027 cohorts — for organizations</span>
-      <h1 class="h1">Your next business idea is <em>already on your payroll.</em></h1>
-      <p class="hero-sub">MUT In-Company is a six-week intrapreneurship program for organizations in Germany. Your people validate real venture ideas with real customers — and pitch funded business cases to your management team.</p>
+      <span class="badge"><span class="dot"></span> AI-Powered Venture Building · Cohort 04 · employer-sponsored seats available</span>
+      <h1 class="h1">Build real ventures with AI — <em>without quitting your job.</em></h1>
+      <p class="hero-sub">MUT is a premium, six-week venture-building sprint for corporate leaders and intrapreneurs in Germany. From Purpose Canvas to a live, no-code MVP — powered by ChatGPT, Claude, and a method your manager will happily sign off on.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#program">See the 6 weeks</a>
+        <a class="btn btn-primary" href="#pricing">Reserve your seat — €4,900 <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#sponsorship">Get sponsored by your employer</a>
       </div>
-      <p class="hero-meta">On-site + live online &nbsp;·&nbsp; German or English &nbsp;·&nbsp; 6–12 participants per cohort</p>
+      <p class="hero-meta">Part-time · Live online + on-site days &nbsp;·&nbsp; German or English &nbsp;·&nbsp; 4–6 hrs/week</p>
     </div>
 
     <div class="hero-visual" aria-hidden="true">
@@ -345,29 +392,29 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 
       <div class="doc">
         <div class="doc-head">
-          <small>Internal Venture Brief</small>
-          <small>Confidential</small>
+          <small>Sprint Passport</small>
+          <small>Cohort 04</small>
         </div>
-        <h3>Venture Case № 03</h3>
-        <div class="doc-row"><span>Team</span><b>4 employees ✓</b></div>
-        <div class="doc-row"><span>Validation</span><b>14 customer interviews</b></div>
-        <div class="doc-row"><span>Business case</span><b>Priced &amp; ROI-positive</b></div>
-        <div class="doc-row"><span>Ask</span><b>Pilot budget · Q2</b></div>
-        <div class="doc-status">✓ Approved by management — pilot starts Monday</div>
-        <div class="stamp">Validated<br>·<br>2027</div>
+        <h3>AI Venture Builder</h3>
+        <div class="doc-row"><span>Toolkit</span><b>ChatGPT · Claude · No-Code</b></div>
+        <div class="doc-row"><span>Week 2</span><b>Purpose Canvas ✓</b></div>
+        <div class="doc-row"><span>Week 4</span><b>AI Brand Script ✓</b></div>
+        <div class="doc-row"><span>Week 5</span><b>Web MVP — live ✓</b></div>
+        <div class="doc-status">✓ Employer-sponsored — seat approved by HR</div>
+        <div class="stamp">AI-Powered<br>·<br>2027</div>
       </div>
 
       <div class="chip-card chip-1">
-        <div class="chip-ico">📊</div>
-        <div>Business case approved<small>evidence, not opinions</small></div>
+        <div class="chip-ico">🎯</div>
+        <div>Purpose Canvas done<small>strategy with ChatGPT &amp; Claude</small></div>
       </div>
       <div class="chip-card chip-2">
         <div class="chip-ico">🚀</div>
-        <div>Pilot budget released<small>decision in week 6</small></div>
+        <div>MVP live in 5 days<small>no-code + AI, zero developers</small></div>
       </div>
       <div class="chip-card chip-3">
         <div class="chip-ico">🎤</div>
-        <div>Demo Day<small>your management, in the room</small></div>
+        <div>Demo Day<small>nomination → Mana's Open Incubator</small></div>
       </div>
     </div>
   </div>
@@ -376,9 +423,9 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <!-- ============ STATS ============ -->
 <div class="stats">
   <div class="container stats-grid">
-    <div class="stat"><b>6 <i>weeks</i></b><span>part-time, beside the day job</span></div>
-    <div class="stat"><b>6–12 <i>people</i></b><span>per in-house cohort</span></div>
-    <div class="stat"><b>3 <i>formats</i></b><span>cohort · sprint · workshop</span></div>
+    <div class="stat"><b>6 <i>weeks</i></b><span>part-time, beside your day job</span></div>
+    <div class="stat"><b>AI-<i>first</i></b><span>ChatGPT · Claude · no-code stack</span></div>
+    <div class="stat"><b>€4,900 <i>/ seat</i></b><span>employer sponsorship available</span></div>
     <div class="stat"><b>DE <i>+ EN</i></b><span>same program, either language</span></div>
   </div>
 </div>
@@ -386,8 +433,8 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="mq-track">
-    <span>MUT</span><span>Gründer*innen</span><span>Neuanfang</span><span>Teams ship, decks don't</span><span>Intrapreneurship</span><span>Made in Germany</span>
-    <span>MUT</span><span>Gründer*innen</span><span>Neuanfang</span><span>Teams ship, decks don't</span><span>Intrapreneurship</span><span>Made in Germany</span>
+    <span>Purpose Canvas</span><span>AI Brand Script</span><span>Rapid Web MVP</span><span>ChatGPT</span><span>Claude</span><span>No-Code</span><span>Open Incubator</span>
+    <span>Purpose Canvas</span><span>AI Brand Script</span><span>Rapid Web MVP</span><span>ChatGPT</span><span>Claude</span><span>No-Code</span><span>Open Incubator</span>
   </div>
 </div>
 
@@ -396,24 +443,29 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   <div class="container">
     <div class="section-head rv">
       <span class="eyebrow">01 · For whom</span>
-      <h2 class="h2">Built for the people who <em>move organizations.</em></h2>
-      <p class="lede">MUT In-Company works when a real team with a real mandate books it. Typically that's one of these three.</p>
+      <h2 class="h2">For people who want to <em>build,</em> not just attend.</h2>
+      <p class="lede">MUT is built for professionals who want to launch new initiatives or step into venture building — using modern AI tools, with their employer cheering (and paying).</p>
     </div>
     <div class="who-grid">
       <div class="who-card rv">
         <div class="who-emoji">🚀</div>
-        <h3>New-Business &amp; Innovation</h3>
-        <p>You've been tasked with building a new line, product, or segment — and the quarter is already full. We give your team a six-week engine that turns strategy decks into validated business cases.</p>
+        <h3>Corporate leaders &amp; intrapreneurs</h3>
+        <p>You want to launch new initiatives inside — or beside — your organization, and transition into venture building using modern AI tools. This sprint gives you the method, the stack, and a real venture in your portfolio.</p>
       </div>
       <div class="who-card rv" data-d="1">
-        <div class="who-emoji">🌱</div>
-        <h3>HR &amp; People Development</h3>
-        <p>Another e-learning course nobody finishes? This is L&amp;D people talk about: participants leave with founder skills — validation, pricing, pitching — and a venture they actually built.</p>
+        <div class="who-emoji">🤖</div>
+        <h3>The AI-curious professional</h3>
+        <p>You know AI changes your job — you'd rather wield it than watch it. Six weeks of hands-on ChatGPT, Claude, and no-code building beats any webinar certificate.</p>
       </div>
       <div class="who-card rv" data-d="2">
+        <div class="who-emoji">🌱</div>
+        <h3>HR &amp; People Development</h3>
+        <p>Another e-learning course nobody finishes? This is L&amp;D people talk about: participants leave with founder skills — validation, AI tooling, pitching — and a venture they actually built.</p>
+      </div>
+      <div class="who-card rv" data-d="3">
         <div class="who-emoji">🔄</div>
-        <h3>Transformation Leads</h3>
-        <p>Culture change doesn't come from posters. A cohort of intrapreneurs who shipped something real changes how the whole organization thinks about risk and initiative.</p>
+        <h3>Innovation &amp; transformation teams</h3>
+        <p>Send a squad, not a memo. A cohort that shipped something real changes how your whole organization thinks about risk, speed, and initiative.</p>
       </div>
     </div>
   </div>
@@ -424,105 +476,135 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   <div class="container">
     <div class="section-head center rv">
       <span class="eyebrow">02 · Program</span>
-      <h2 class="h2">Six weeks. One <em>validated, funded</em> business case.</h2>
-      <p class="lede">Your people keep their day jobs. One evening cohort rhythm plus coaching — and every week ends with evidence your management can actually decide on.</p>
+      <h2 class="h2">Six weeks. From <em>Purpose Canvas</em> to live MVP.</h2>
+      <p class="lede">AI isn't a topic in this program — it's the power tool in every week. You keep your day job; 4–6 focused hours a week do the rest.</p>
     </div>
     <div class="weeks">
       <div class="week rv">
-        <span class="week-num">Week 01 — Decide</span>
-        <h3>From idea fog to one venture</h3>
+        <span class="week-num">Week 01–02 · Decide &amp; Validate</span>
+        <h3>Purpose, strategy &amp; evidence</h3>
         <ul>
-          <li>Map team skills to company strategy</li>
-          <li>Kill weak ideas early — on purpose</li>
-          <li>Align sponsors &amp; success criteria</li>
-        </ul>
-        <div class="week-out">One venture idea with a named sponsor and a one-pager.</div>
-      </div>
-      <div class="week rv" data-d="1">
-        <span class="week-num">Week 02 — Validate</span>
-        <h3>Evidence, not opinions</h3>
-        <ul>
-          <li>10+ real customer conversations (scripted)</li>
+          <li><b>Purpose Canvas</b> workshop — why you, why this venture</li>
+          <li><b>ChatGPT &amp; Claude as strategy sparring partners</b> — structured prompts for positioning and market maps</li>
+          <li>10+ real customer conversations, synthesized with AI</li>
           <li>A €0 demand test on the real market</li>
-          <li>Go / pivot / kill — decided with data</li>
         </ul>
-        <div class="week-out">A validation folder: what customers will pay for, with proof.</div>
-      </div>
-      <div class="week rv" data-d="2">
-        <span class="week-num">Week 03 — Model</span>
-        <h3>Pricing &amp; the money math</h3>
-        <ul>
-          <li>Business model options, priced</li>
-          <li>ROI math your CFO will respect</li>
-          <li>Make-or-buy and cannibalization checks</li>
-        </ul>
-        <div class="week-out">A priced offer and a business model the numbers support.</div>
-      </div>
-      <div class="week rv">
-        <span class="week-num">Week 04 — Build the case</span>
-        <h3>The corporate paperwork, demystified</h3>
-        <ul>
-          <li>Business case in your company's format</li>
-          <li>Stakeholder map: who says yes, who blocks</li>
-          <li>Budget, legal, and compliance pre-checks</li>
-        </ul>
-        <div class="week-out">A business case pack ready for your internal approvals.</div>
+        <div class="week-out">A validated venture direction — with proof customers want it.</div>
       </div>
       <div class="week rv" data-d="1">
-        <span class="week-num">Week 05 — Show up</span>
-        <h3>Prototype &amp; internal story</h3>
+        <span class="week-num">Week 03–04 · Brand &amp; Model</span>
+        <h3>AI Brand Script &amp; identity</h3>
         <ul>
-          <li>A landing page or prototype customers touch</li>
-          <li>The one sentence the venture is known for</li>
-          <li>20 stakeholder &amp; customer conversations</li>
+          <li><b>AI Brand Script</b> — your venture's story, drafted with AI, sharpened by mentors</li>
+          <li><b>Visual identity</b> — logo drafts, moodboards &amp; design system with AI tools</li>
+          <li>Pricing &amp; business model, ROI-checked</li>
+          <li>Stakeholder map &amp; internal pitch prep</li>
         </ul>
-        <div class="week-out">Something people can see, use, and remember.</div>
+        <div class="week-out">A brand that looks real — because by then, it is.</div>
       </div>
       <div class="week rv" data-d="2">
-        <span class="week-num">Week 06 — Decide</span>
-        <h3>Demo Day with management</h3>
+        <span class="week-num">Week 05–06 · Build &amp; Launch</span>
+        <h3>Rapid Web MVP &amp; Demo Day</h3>
         <ul>
-          <li>The 3-minute pitch, rehearsed with feedback</li>
-          <li>Decision ask: pilot, budget, owners</li>
-          <li>The 90-day implementation plan</li>
+          <li><b>Rapid Web MVP</b> — a live product in days, no-code + AI, zero developers</li>
+          <li>Outreach engine: 20 warm conversations launched</li>
+          <li>Pitch rehearsed with brutal, kind feedback</li>
+          <li><b>Demo Day</b> — and nomination into <b>Mana's Open Incubator</b> for the strongest ventures</li>
         </ul>
-        <div class="week-out">A yes/no/iterate decision from management — in the room.</div>
+        <div class="week-out">A live MVP, a real pitch — and a runway behind it.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FORMATS ============ -->
-<section class="section" id="formats">
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
   <div class="container">
-    <div class="section-head rv">
-      <span class="eyebrow">03 · Formats</span>
-      <h2 class="h2">Three ways to bring MUT <em>inside.</em></h2>
-      <p class="lede">From a full six-week cohort to a one-day workshop. Every format ends in evidence and a decision — never a deck that dies in a drawer.</p>
+    <div class="section-head center rv">
+      <span class="eyebrow">03 · Pricing</span>
+      <h2 class="h2">One seat. <em>Everything</em> in.</h2>
+      <p class="lede">Most participants don't pay this themselves — their L&amp;D budget does. That's not a bug, it's the design.</p>
     </div>
-    <div class="fmt-grid">
-      <div class="fmt-card rv">
-        <span class="fmt-tag">6 weeks · in-house</span>
-        <h3>Intrapreneurship cohort</h3>
-        <p>The full six-week engine for 6–12 employees. Kick-off on-site, weekly live sessions, coaching, and your own Demo Day with management on the final day.</p>
-        <div class="fmt-price">from €14,800 per cohort<span>custom pricing — volume &amp; non-profit arrangements possible</span></div>
+    <div class="price-grid">
+      <div class="price-card featured rv">
+        <div class="price-lab">Individual seat · Cohort 04</div>
+        <div class="price-num">€4,900</div>
+        <div class="price-note">Six weeks, part-time. Or sponsored by your employer — see below.</div>
+        <ul class="incl">
+          <li>All 18 live sessions + on-site kick-off &amp; Demo Day</li>
+          <li>Purpose Canvas, AI Brand Script &amp; full prompt library</li>
+          <li>Hands-on ChatGPT / Claude / no-code toolkits — from zero</li>
+          <li>Your own live Web MVP, built in the program</li>
+          <li>Weekly hot-seat coaching on your exact venture</li>
+          <li>Demo Day + nomination to Mana's Open Incubator</li>
+        </ul>
+        <div class="sponsor-tease"><b>Get sponsored:</b> forward the template below to your manager — most seats are approved within a week.</div>
       </div>
-      <div class="fmt-card rv" data-d="1">
-        <span class="fmt-tag">2 days + 6 weeks</span>
-        <h3>Innovation sprint</h3>
-        <p>Two-day intensive, then six part-time weeks beside the day job. Built around one strategic question — a new product line, customer segment, or market entry.</p>
-        <div class="fmt-price">from €9,800 per sprint<span>up to 20 participants, one venture question</span></div>
-      </div>
-      <div class="fmt-card rv" data-d="2">
-        <span class="fmt-tag">Half or full day</span>
-        <h3>Workshops &amp; keynotes</h3>
-        <p>A concentrated shot of founder method for offsites, conferences, and L&amp;D programs. Most requested topic: how to validate an idea without a budget.</p>
-        <div class="fmt-price">from €2,400 per day<span>up to 40 participants, on-site or remote</span></div>
+
+      <div class="team-card rv" data-d="1">
+        <h3>Bringing a team?</h3>
+        <p class="sub">For organizations sending squads — invoiced, customized, and cheaper per seat.</p>
+        <div class="tfmt">
+          <div><span class="n">Intrapreneurship cohort</span><span class="d">6 weeks in-house · 6–12 people · own Demo Day</span></div>
+          <div class="p">from €14,800</div>
+        </div>
+        <div class="tfmt">
+          <div><span class="n">Innovation sprint</span><span class="d">2 days on-site + 6 part-time weeks · one strategic question</span></div>
+          <div class="p">from €9,800</div>
+        </div>
+        <div class="tfmt">
+          <div><span class="n">Workshop / keynote</span><span class="d">half or full day · up to 40 people · offsites &amp; L&amp;D days</span></div>
+          <div class="p">from €2,400</div>
+        </div>
+        <a class="btn btn-ghost btn-sm" href="#contact">Request a team proposal <span class="arr">→</span></a>
       </div>
     </div>
-    <div class="fmt-note rv">
-      <span class="ic">💰</span>
-      German funding check: employee upskilling may be subsidized under the Qualifizierungschancengesetz — we help you check before you commit.
+  </div>
+</section>
+
+<!-- ============ SPONSORSHIP ============ -->
+<section class="section" id="sponsorship" style="padding-top:0">
+  <div class="container wrap">
+    <div class="section-head center rv">
+      <span class="eyebrow">The 5-minute approval</span>
+      <h2 class="h2">Get sponsored <em>by your employer.</em></h2>
+      <p class="lede">Copy this email, fill the brackets, send it to your manager or HR. It's written the way approvers think: outcomes, cost, and what the company gets back.</p>
+    </div>
+    <div class="mail-card rv">
+      <div class="mail-top">
+        <div style="display:flex;align-items:center;gap:14px">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span class="t">Sponsorship email — ready to forward</span>
+        </div>
+        <div class="mail-actions">
+          <button class="btn btn-primary btn-sm" id="copyBtn" type="button">Copy email</button>
+          <button class="btn btn-ghost btn-sm" id="txtBtn" type="button">Download .txt</button>
+          <button class="btn btn-ghost btn-sm" id="pdfBtn" type="button">Save as PDF</button>
+        </div>
+      </div>
+      <div class="mail-meta">
+        <div><b>To:</b> [Manager / HR]</div>
+        <div><b>Subject:</b> Training approval — AI-Powered Venture Building sprint (€4,900, 6 weeks part-time)</div>
+      </div>
+      <div class="mail-body" id="mailBody">
+        <p>Hi <span class="ph">[Manager's name]</span>,</p>
+        <p>I'd like to join <b>MUT</b> — a six-week, part-time AI-venture sprint for professionals in Germany (evenings + one Saturday, live online + on-site days). I'm requesting L&amp;D budget approval of <b>€4,900</b>.</p>
+        <p><b>Why this is worth it for <span class="ph">[Company]</span>:</b></p>
+        <ul>
+          <li><b>AI upskilling:</b> hands-on with ChatGPT, Claude, and no-code — the stack our teams are adopting anyway.</li>
+          <li><b>Venture practice:</b> I'll validate one real opportunity with 10+ customer conversations and a costed business case.</li>
+          <li><b>Tangible output:</b> a live web MVP, an AI brand script, and a pitch to leadership — not a certificate in a drawer.</li>
+          <li><b>Retention &amp; visibility:</b> the strongest ventures continue into Mana's Open Incubator.</li>
+        </ul>
+        <p><b>What's included:</b> 18 live sessions, 1:1 coaching, the full AI toolkit &amp; prompt library, template pack, Demo Day, and Open Incubator nomination.</p>
+        <p>Program: <span class="ph">[dates]</span> · 4–6 hrs/week · German or English. Full details: <span class="ph">[link to this page]</span></p>
+        <p>Happy to walk you through the curriculum. Could we align on budget this week so I can reserve a seat?</p>
+        <p>Best,<br><span class="ph">[Your name]</span></p>
+      </div>
+    </div>
+    <div class="spon-note rv">
+      <span>💰</span>
+      <span>In Germany, employer-funded upskilling may also be subsidized (e.g. Qualifizierungschancengesetz) — worth one question to HR before you send. We'll help you check.</span>
     </div>
   </div>
 </section>
@@ -532,30 +614,45 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   <div class="container">
     <div class="section-head center rv">
       <span class="eyebrow">04 · Mentors</span>
-      <h2 class="h2">Mentors who've <em>actually done it</em> — in Germany.</h2>
-      <p class="lede">Not keynote speakers. Practitioners who validate businesses, win customers, and unlock funding in the German market — teaching your people exactly how.</p>
+      <h2 class="h2">Humans who've done it. <em>An AI that never sleeps.</em></h2>
+      <p class="lede">Three practitioners plus Mana — your always-on AI venture coach from Purpose Canvas to MVP.</p>
     </div>
     <div class="mentor-grid">
       <div class="mentor rv">
         <div class="avatar">AS</div>
-        <h3>Dr. Anke Sommer</h3>
-        <div class="role">Business Case &amp; Finance</div>
-        <p>Former corporate controller, now venture advisor. Turns validation data into business cases CFOs sign off on.</p>
-        <q>Numbers tell the story. Only funnier.</q>
+        <div>
+          <h3>Dr. Anke Sommer</h3>
+          <div class="role">Business Case &amp; Finance</div>
+          <p>Former corporate controller, now venture advisor. Turns validation data into business cases CFOs sign off on.</p>
+          <q>Numbers tell the story. Only funnier.</q>
+        </div>
       </div>
       <div class="mentor rv" data-d="1">
         <div class="avatar">MO</div>
-        <h3>Marlene Okafor</h3>
-        <div class="role">Brand &amp; First Customers</div>
-        <p>Founded two D2C brands in Berlin. Teaches positioning and outreach that gets replies — without ad budgets.</p>
-        <q>Your first 10 customers don't come from ads.</q>
+        <div>
+          <h3>Marlene Okafor</h3>
+          <div class="role">AI Brand &amp; Identity</div>
+          <p>Founded two D2C brands in Berlin. Teaches the AI Brand Script and visual identity — big-brand look, zero agency budget.</p>
+          <q>Your first 10 customers don't come from ads.</q>
+        </div>
       </div>
       <div class="mentor rv" data-d="2">
         <div class="avatar">JB</div>
-        <h3>Jonas Brandt</h3>
-        <div class="role">Funding &amp; Grants</div>
-        <p>Coach for EXIST, KfW, and innovation programs. Free money exists — he knows which forms unlock it.</p>
-        <q>Germany will fund your idea. Seriously.</q>
+        <div>
+          <h3>Jonas Brandt</h3>
+          <div class="role">Funding &amp; Grants</div>
+          <p>Coach for EXIST, KfW, and innovation programs. Free money exists — he knows which forms unlock it.</p>
+          <q>Germany will fund your idea. Seriously.</q>
+        </div>
+      </div>
+      <div class="mentor rv" data-d="3">
+        <div class="avatar">M</div>
+        <div>
+          <h3>Mana</h3>
+          <div class="role">AI Venture Coach</div>
+          <p>Your always-on sparring partner throughout the sprint — Purpose Canvas prompts, MVP feedback, pitch drills. Built on frontier LLMs.</p>
+          <q>Ping me at 2am. I don't sleep.</q>
+        </div>
       </div>
     </div>
   </div>
@@ -566,12 +663,12 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   <div class="container">
     <div class="section-head rv">
       <span class="eyebrow">05 · Voices</span>
-      <h2 class="h2">What clients say <em>after Demo Day.</em></h2>
+      <h2 class="h2">What alumni say <em>after Demo Day.</em></h2>
     </div>
     <div class="quote-grid">
       <div class="quote rv">
-        <p>Six weeks, one validated business case, a pilot budget. Normally that takes a quarter — and dies in a deck.</p>
-        <footer><b>M. Weber</b> · Innovation Lead · mid-size logistics · Hamburg</footer>
+        <p>My manager approved it in one meeting — the sponsorship template did the work. Six weeks later I pitched our leadership a validated AI venture with a live MVP.</p>
+        <footer><b>C. Vogel</b> · Product Lead · insurance · Köln</footer>
       </div>
       <div class="quote rv" data-d="1">
         <p>The best L&amp;D investment we made last year. Three of our people now run internal ventures — and the waiting list for the next cohort is internal.</p>
@@ -587,22 +684,22 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
     <div class="section-head center rv">
       <span class="eyebrow">06 · Contact</span>
       <h2 class="h2">Start with a <em>30-minute call.</em></h2>
-      <p class="lede">No slides on the first call. You tell us your goal, we tell you honestly whether MUT fits — and which format.</p>
+      <p class="lede">You tell us your goal, we tell you honestly whether MUT fits — and how to get it sponsored.</p>
     </div>
     <div class="price-grid">
       <div class="steps-card rv">
         <h3>What happens next</h3>
-        <p class="sub">Three steps from first mail to kick-off. Typically under four weeks.</p>
+        <p class="sub">Three steps from first message to kick-off. Typically under four weeks.</p>
         <ol class="steps">
-          <li><b>Intro call — 30 minutes.</b>We listen: your goal, your people, your calendar. Zero pitch, zero pressure.</li>
-          <li><b>Tailored proposal — within a week.</b>Format, dates, price, and a program outline mapped to your strategic question.</li>
-          <li><b>Kick-off.</b>We run the program inside your organization. You get a short weekly pulse update — nothing more to manage.</li>
+          <li><b>Intro call — 30 minutes.</b>We listen: your goal, your venture idea, your calendar. Zero pitch, zero pressure.</li>
+          <li><b>Sponsorship or seat — within a week.</b>We help you prepare the approval email, or send a team proposal straight to procurement.</li>
+          <li><b>Kick-off.</b>Purpose Canvas in week one, live MVP by week five. You get a short weekly pulse update — nothing more to manage.</li>
         </ol>
-        <div class="mail-line">Prefer email? <a href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">hello@mut.camp</a> — we reply within 48 hours.</div>
+        <div class="mail-line">Prefer email? <a href="mailto:hello@mut.camp">hello@mut.camp</a> — we reply within 48 hours.</div>
       </div>
 
       <div class="form-card rv" data-d="1" id="formCard">
-        <h3>Request a proposal</h3>
+        <h3>Reserve your seat</h3>
         <p class="sub">Two minutes. Tells us enough to make the first call useful.</p>
         <form id="contactForm" novalidate>
           <div class="f-row">
@@ -619,45 +716,34 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
           </div>
           <div class="f-row">
             <div class="f-group">
-              <label for="fCompany">Company</label>
+              <label for="fCompany">Company <span style="font-weight:500;color:var(--ink-faint)">(optional)</span></label>
               <input id="fCompany" type="text" autocomplete="organization" placeholder="Acme GmbH">
-              <span class="f-err">Which organization are you with?</span>
             </div>
             <div class="f-group">
-              <label for="fRole">Your role</label>
-              <select id="fRole">
+              <label for="fPath">How will you join?</label>
+              <select id="fPath">
                 <option value="">Choose…</option>
-                <option>Innovation / Strategy</option>
-                <option>HR / People Development</option>
-                <option>Executive team</option>
-                <option>Other</option>
+                <option>Individual seat — employer-sponsored</option>
+                <option>Individual seat — self-funded</option>
+                <option>Team cohort / sprint</option>
+                <option>Workshop / keynote</option>
+                <option>Not sure yet — advise me</option>
               </select>
-              <span class="f-err">Pick the closest fit.</span>
+              <span class="f-err">Pick one — "not sure yet" is a valid answer.</span>
             </div>
           </div>
           <div class="f-group">
-            <label for="fFormat">Which format interests you?</label>
-            <select id="fFormat">
-              <option value="">Choose…</option>
-              <option>Intrapreneurship cohort (6 weeks)</option>
-              <option>Innovation sprint (2 days + 6 weeks)</option>
-              <option>Workshop / keynote</option>
-              <option>Not sure yet — advise us</option>
-            </select>
-            <span class="f-err">Pick one — "not sure yet" is a valid answer.</span>
+            <label for="fMsg">What do you want to build? <span style="font-weight:500;color:var(--ink-faint)">(optional)</span></label>
+            <textarea id="fMsg" placeholder="One or two sentences about your venture idea, your role, or your timing."></textarea>
           </div>
-          <div class="f-group">
-            <label for="fMsg">What would you like to achieve? <span style="font-weight:500;color:var(--ink-faint)">(optional)</span></label>
-            <textarea id="fMsg" placeholder="One or two sentences about the goal, the people, or the timing."></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit">Request a proposal <span class="arr">→</span></button>
+          <button class="btn btn-primary" type="submit">Request my seat <span class="arr">→</span></button>
           <p class="form-fine">No newsletter, no follow-up sequence. One personal reply.</p>
         </form>
         <div class="success" id="successBox">
           <div class="big">✓</div>
           <h3>Request received.</h3>
           <p>Thank you — we read every request personally and you'll hear from us within 48 hours to schedule your intro call.</p>
-          <div class="sig">— Team MUT</div>
+          <div class="sig">— Team MUT &amp; Mana</div>
         </div>
       </div>
     </div>
@@ -673,28 +759,28 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
     </div>
     <div class="faq-list">
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">German or English?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Either — your choice, per cohort. Materials are bilingual (DE/EN) by default, and mixed-language groups work well in practice. The German market context (customers, funding, legal pre-checks) is part of the program either way.</p></div>
+        <button class="faq-q" aria-expanded="false">Can my employer pay for my seat?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — and most seats are employer-sponsored. Use the <a href="#sponsorship" style="color:var(--accent);font-weight:600">sponsorship email template</a> above: fill the brackets, send it to your manager or HR. It's written to answer approvers' real questions (outcomes, cost, company benefit). We invoice your company directly, and in Germany employer-funded upskilling may be subsidized under the Qualifizierungschancengesetz — worth asking.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">On-site, remote, or hybrid?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Hybrid by design: kick-off and Demo Day on-site at your office, weekly sessions live online. This keeps travel costs low and the day job alive. Full-remote is possible; full on-site is possible for sprints and workshops.</p></div>
+        <button class="faq-q" aria-expanded="false">Do I need AI experience?<span class="plus">+</span></button>
+        <div class="faq-a"><p>None. Week 1 starts from zero: you'll get the toolkit, the prompt library, and guided reps with ChatGPT and Claude. By week 5 you'll ship a no-code web MVP that looks like an agency built it. If you can write an email, you can do this.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">Who should participate?<span class="plus">+</span></button>
-        <div class="faq-a"><p>6–12 people per cohort: a deliberate mix of builders, domain experts, and one sponsor with budget authority per venture. Participants need roughly 4–6 hours per week beside their day job — we help you plan capacity before you commit.</p></div>
+        <button class="faq-q" aria-expanded="false">Which AI tools do we actually use?<span class="plus">+</span></button>
+        <div class="faq-a"><p>ChatGPT and Claude as the core thinking-and-writing stack, plus a curated no-code toolkit for the Rapid Web MVP. Everything is taught hands-on inside the program — no licenses to buy beforehand, checklists provided. Bring a laptop and curiosity.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">What happens to the ideas and the IP?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Everything stays yours. We work under NDA by default, all material generated in the program belongs to your organization, and ventures are internal by design. If a venture should spin out instead, we help structure that — but it's your call, not ours.</p></div>
+        <button class="faq-q" aria-expanded="false">I have a full-time job. Realistically, how much time?<span class="plus">+</span></button>
+        <div class="faq-a"><p>4–6 hours per week: two live evening sessions (19:00–21:00), one Saturday half-day twice in the program, plus focused building time. Everything is recorded. Most participants keep full jobs, kids, and sanity intact — that's the design constraint, not an afterthought.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">Can we get funding for the program?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Often, yes. Employee upskilling may be subsidized under the Qualifizierungschancengesetz; in some states additional programs apply. We run a short funding check with you before the proposal, so you know your net cost before signing anything.</p></div>
+        <button class="faq-q" aria-expanded="false">What happens to my venture and IP?<span class="plus">+</span></button>
+        <div class="faq-a"><p>What you build is yours. If you build on a company opportunity with a sponsored seat, your company's policies apply — we help you clarify that in week 1, before you invest six weeks. The strongest ventures get nominated into Mana's Open Incubator to continue after Demo Day.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">What if no venture survives validation?<span class="plus">+</span></button>
-        <div class="faq-a"><p>That's a real outcome — and a cheap one. Killing a weak idea in week 2 with evidence costs a fraction of killing it in month 9 with a budget. Teams that hit a dead end pivot within the program; the skills and the customer insight stay either way.</p></div>
+        <button class="faq-q" aria-expanded="false">What if my venture dies in validation?<span class="plus">+</span></button>
+        <div class="faq-a"><p>That's a real outcome — and a cheap one. Killing a weak idea in week 2 with evidence costs a fraction of killing it in month 9 with savings. You pivot within the program with your mentors, and the AI toolkit, the brand script, and the MVP skills stay with you regardless.</p></div>
       </div>
     </div>
   </div>
@@ -703,9 +789,9 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <!-- ============ FINAL CTA ============ -->
 <section class="final">
   <div class="container">
-    <h2 class="rv">Your competitors are running innovation theater. You could be running <em>a pilot.</em></h2>
-    <p class="rv">One 30-minute call. We tell you honestly whether MUT fits your organization — and if it doesn't, we say so.</p>
-    <a class="btn btn-light rv" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call <span class="arr">→</span></a>
+    <h2 class="rv">Six weeks from now you could have a live venture — <em>or another certificate in a drawer.</em></h2>
+    <p class="rv">Purpose Canvas to live MVP, powered by AI, sponsored by your employer. One 30-minute call to start.</p>
+    <a class="btn btn-light rv" href="#pricing">Reserve your seat <span class="arr">→</span></a>
     <div class="mail">Questions first? <a href="mailto:hello@mut.camp">hello@mut.camp</a></div>
   </div>
 </section>
@@ -718,7 +804,8 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
     <a class="logo" href="#top"><span class="logo-mark">✳</span> <span>MUT</span></a>
     <nav class="foot-links" aria-label="Footer">
       <a href="#program">Program</a>
-      <a href="#formats">Formats</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#sponsorship">Sponsorship</a>
       <a href="#contact">Contact</a>
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
@@ -726,6 +813,8 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
     <div>© <span id="year">2026</span> MUT · <span class="foot-mut">Made with MUT in Düsseldorf</span></div>
   </div>
 </footer>
+
+<div class="toast" id="toast">Copied ✓ — now fill the brackets and send.</div>
 
 <script>
 // ---------- Nav: scroll border + mobile menu ----------
@@ -779,6 +868,102 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: 0.12 });
 document.querySelectorAll('.rv').forEach(function(el) { observer.observe(el); });
 
+// ---------- Sponsorship template ----------
+function templateText() {
+  var site = location.href.split('#')[0].split('?')[0];
+  return [
+    'To: [Manager / HR]',
+    'Subject: Training approval — AI-Powered Venture Building sprint (EUR 4,900, 6 weeks part-time)',
+    '',
+    'Hi [Manager\u2019s name],',
+    '',
+    'I\u2019d like to join MUT \u2014 a six-week, part-time AI-venture sprint for professionals in Germany (evenings + one Saturday, live online + on-site days). I\u2019m requesting L&D budget approval of EUR 4,900.',
+    '',
+    'Why this is worth it for [Company]:',
+    '- AI upskilling: hands-on with ChatGPT, Claude, and no-code \u2014 the stack our teams are adopting anyway.',
+    '- Venture practice: I\u2019ll validate one real opportunity with 10+ customer conversations and a costed business case.',
+    '- Tangible output: a live web MVP, an AI brand script, and a pitch to leadership \u2014 not a certificate in a drawer.',
+    '- Retention & visibility: the strongest ventures continue into Mana\u2019s Open Incubator.',
+    '',
+    'What\u2019s included: 18 live sessions, 1:1 coaching, the full AI toolkit & prompt library, template pack, Demo Day, and Open Incubator nomination.',
+    '',
+    'Program: [dates] \u00b7 4\u20136 hrs/week \u00b7 German or English. Full details: ' + site,
+    '',
+    'Happy to walk you through the curriculum. Could we align on budget this week so I can reserve a seat?',
+    '',
+    'Best,',
+    '[Your name]'
+  ].join('\n');
+}
+
+var toast = document.getElementById('toast');
+var toastTimer;
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 2600);
+}
+
+document.getElementById('copyBtn').addEventListener('click', function() {
+  var text = templateText();
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      showToast('Copied \u2713 \u2014 now fill the [brackets] and send.');
+    }).catch(function() { fallbackCopy(text); });
+  } else { fallbackCopy(text); }
+});
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); showToast('Copied \u2713 \u2014 now fill the [brackets] and send.'); }
+  catch (e) { showToast('Select the text below and copy manually.'); }
+  document.body.removeChild(ta);
+}
+
+document.getElementById('txtBtn').addEventListener('click', function() {
+  var blob = new Blob([templateText()], { type: 'text/plain;charset=utf-8' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'MUT-sponsorship-email.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+  showToast('Downloaded \u2713 \u2014 mut-sponsorship-email.txt');
+});
+
+document.getElementById('pdfBtn').addEventListener('click', function() {
+  var w = window.open('', '_blank');
+  if (!w) { showToast('Popup blocked \u2014 allow popups, then try again.'); return; }
+  var body = document.getElementById('mailBody').innerHTML
+    .replace(/<span class="ph">/g, '<span style="color:#B3304E;font-weight:600">')
+    .replace(/<\/?b>/g, function(m) { return m; });
+  w.document.write(
+    '<!DOCTYPE html><html><head><title>MUT \u2014 Employer Sponsorship Email</title>' +
+    '<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">' +
+    '<style>body{font-family:Inter,sans-serif;color:#221B15;max-width:680px;margin:40px auto;padding:0 24px;line-height:1.65;font-size:14.5px}' +
+    'h1{font-family:Fraunces,Georgia,serif;font-size:26px;margin:0 0 4px}' +
+    '.brand{display:flex;align-items:center;gap:10px;margin-bottom:26px}.mark{width:38px;height:38px;border-radius:11px;background:#B3304E;color:#FAF6EF;display:grid;place-items:center;font-family:Fraunces,serif;font-style:italic;font-weight:600;font-size:20px}' +
+    '.sub{color:#8A7F72;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:26px}' +
+    '.meta{background:#FAF6EF;border:1px solid rgba(34,27,21,.12);border-radius:12px;padding:14px 18px;margin-bottom:22px;font-size:13.5px}' +
+    'p{margin:0 0 12px}ul{margin:0 0 12px 18px}li{margin:4px 0}' +
+    '.foot{margin-top:30px;padding-top:18px;border-top:1px dashed rgba(34,27,21,.2);color:#8A7F72;font-size:12.5px}' +
+    '@media print{body{margin:0}}</style></head><body>' +
+    '<div class="brand"><div class="mark">M</div><div><h1>MUT \u2014 Sponsorship Email</h1></div></div>' +
+    '<div class="sub">Fill the [brackets] \u00b7 forward to your manager or HR</div>' +
+    '<div class="meta"><b>To:</b> [Manager / HR]<br><b>Subject:</b> Training approval \u2014 AI-Powered Venture Building sprint (\u20ac4,900, 6 weeks part-time)</div>' +
+    body +
+    '<div class="foot">MUT \u00b7 AI-Powered Venture Building Sprint \u00b7 ' + location.href.split('#')[0].split('?')[0] + '</div>' +
+    '<script>window.onload=function(){setTimeout(function(){window.print()},400)}<\/script>' +
+    '</body></html>');
+  w.document.close();
+  showToast('Opening print view \u2014 choose \u201cSave as PDF\u201d.');
+});
+
 // ---------- Contact form ----------
 var form = document.getElementById('contactForm');
 form.addEventListener('submit', function(ev) {
@@ -793,17 +978,14 @@ form.addEventListener('submit', function(ev) {
   }
   need('fName', function(v) { return v.length > 1; });
   need('fEmail', function(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); });
-  need('fCompany', function(v) { return v.length > 0; });
-  need('fRole', function(v) { return v.length > 0; });
-  need('fFormat', function(v) { return v.length > 0; });
+  need('fPath', function(v) { return v.length > 0; });
   if (!ok) return;
 
   var inquiry = {
     name: document.getElementById('fName').value.trim(),
     email: document.getElementById('fEmail').value.trim(),
     company: document.getElementById('fCompany').value.trim(),
-    role: document.getElementById('fRole').value,
-    format: document.getElementById('fFormat').value,
+    path: document.getElementById('fPath').value,
     message: document.getElementById('fMsg').value.trim(),
     at: new Date().toISOString()
   };
