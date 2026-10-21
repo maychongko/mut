@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUT — The 6-week bootcamp for founding a business in Germany</title>
-<meta name="description" content="MUT is a part-time, 6-week bootcamp for first-time founders in Germany. Validate your idea, crack the German paperwork, and launch a registered business — with mentors who've done it.">
+<title>MUT — Intrapreneurship programs for organizations in Germany</title>
+<meta name="description" content="MUT In-Company is a 6-week intrapreneurship program for organizations in Germany. Your people validate real venture ideas with real customers — and pitch funded business cases to management.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B3304E'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-size='38' fill='%23FAF6EF' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,7 +65,6 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em}
 .logo-mark{width:36px;height:36px;border-radius:11px;background:var(--accent);color:#FFF8F2;display:grid;place-items:center;font-style:italic;font-size:19px;font-weight:600}
-.logo span i{font-style:italic;color:var(--accent);font-weight:500}
 .nav-links{display:flex;align-items:center;gap:30px;font-size:14.5px;font-weight:600;color:var(--ink-soft)}
 .nav-links a:not(.btn):hover{color:var(--ink)}
 .nav-links .btn{padding:11px 22px;font-size:14.5px}
@@ -84,11 +83,11 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3.5px var(--green-soft);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 3.5px var(--green-soft)}50%{box-shadow:0 0 0 6px var(--green-soft)}}
 .h1{font-size:clamp(2.5rem,5.4vw,4.15rem);margin:22px 0 20px}
-.hero-sub{color:var(--ink-soft);font-size:clamp(1.03rem,1.4vw,1.17rem);max-width:540px;margin-bottom:32px}
+.hero-sub{color:var(--ink-soft);font-size:clamp(1.03rem,1.4vw,1.17rem);max-width:560px;margin-bottom:32px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
 .hero-meta{font-size:13.5px;font-weight:600;color:var(--ink-faint);letter-spacing:.02em}
 
-/* Hero visual — document stack */
+/* Hero visual — venture brief */
 .hero-visual{position:relative;min-height:460px}
 .blob{position:absolute;border-radius:50%;filter:blur(6px);z-index:0}
 .blob-a{width:340px;height:340px;right:-30px;top:-20px;background:radial-gradient(circle at 35% 35%,rgba(179,48,78,.16),rgba(179,48,78,0) 70%)}
@@ -120,7 +119,7 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .stat span{font-size:13px;font-weight:600;color:var(--ink-faint);letter-spacing:.04em}
 
 /* ============ MARQUEE ============ */
-.marquee{background:var(--accent);color:#FFF3EA;overflow:hidden;padding:15px 0;transform:rotate(0deg)}
+.marquee{background:var(--accent);color:#FFF3EA;overflow:hidden;padding:15px 0}
 .mq-track{display:flex;gap:0;width:max-content;animation:mq 26s linear infinite}
 .marquee:hover .mq-track{animation-play-state:paused}
 .mq-track span{font-family:var(--serif);font-style:italic;font-size:17px;font-weight:500;white-space:nowrap;padding:0 26px;position:relative}
@@ -146,8 +145,8 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .who-card h3{font-size:22.5px;margin-bottom:12px}
 .who-card p{color:var(--ink-soft);font-size:15px}
 
-/* Curriculum */
-#curriculum{background:var(--bg-card);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+/* Program weeks */
+#program{background:var(--bg-card);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
 .weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .week{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px 26px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
 .week:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(179,48,78,.35)}
@@ -159,21 +158,16 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .week-out{display:flex;gap:8px;align-items:flex-start;font-size:13px;font-weight:600;color:var(--ink);background:var(--accent-soft);border-radius:10px;padding:10px 13px;line-height:1.45}
 .week-out::before{content:"✓";color:var(--accent);font-weight:800}
 
-/* Format */
+/* Formats */
 .fmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:26px}
-.fmt-card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px}
-.fmt-tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:7px;padding:5px 10px;margin-bottom:16px}
+.fmt-card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column}
+.fmt-tag{display:inline-block;align-self:flex-start;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:7px;padding:5px 10px;margin-bottom:16px}
 .fmt-card h3{font-size:20px;margin-bottom:10px}
-.fmt-card p{color:var(--ink-soft);font-size:14.5px}
+.fmt-card p{color:var(--ink-soft);font-size:14.5px;flex:1}
+.fmt-price{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:13.5px;font-weight:700;color:var(--ink)}
+.fmt-price span{display:block;font-weight:500;color:var(--ink-faint);font-size:12.5px;margin-top:2px}
 .fmt-note{display:flex;gap:12px;align-items:center;background:var(--green-soft);border-radius:14px;padding:16px 20px;font-size:14.5px;font-weight:600;color:var(--green)}
 .fmt-note .ic{font-size:19px}
-
-/* Teams (in-company) */
-.teams-points{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:26px 0 8px}
-.teams-points div{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;font-size:14.3px;color:var(--ink-soft);line-height:1.55}
-.teams-points b{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
-.teams-cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:26px}
-.teams-mail{font-size:13.5px;font-weight:600;color:var(--ink-faint)}
 
 /* Mentors */
 .mentor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -201,26 +195,19 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .quote footer{font-size:13.5px;font-weight:600;color:rgba(246,239,230,.65)}
 .quote footer b{color:#E8A9BC;font-weight:700}
 
-/* Pricing + apply */
-#apply .price-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:start}
-.price-card{background:var(--bg-card);border:1px solid var(--line);border-radius:22px;padding:36px 34px;box-shadow:var(--shadow)}
-.price-card.featured{background:var(--ink);color:#F6EFE6;border-color:transparent;position:relative;overflow:hidden}
-.price-card.featured::after{content:"BEST VALUE";position:absolute;top:20px;right:-34px;transform:rotate(38deg);background:var(--gold);color:var(--ink);font-size:10.5px;font-weight:800;letter-spacing:.12em;padding:5px 40px}
-.price-lab{font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px}
-.price-card.featured .price-lab{color:#E8A9BC}
-.price-num{font-family:var(--serif);font-size:52px;font-weight:600;letter-spacing:-.02em;line-height:1;margin-bottom:4px}
-.price-num sup{font-size:24px;font-weight:500}
-.price-note{font-size:13.5px;color:var(--ink-faint);margin-bottom:22px;font-weight:500}
-.price-card.featured .price-note{color:rgba(246,239,230,.6)}
-.incl{list-style:none;margin-bottom:24px}
-.incl li{position:relative;padding:6.5px 0 6.5px 28px;font-size:14.5px;color:var(--ink-soft)}
-.price-card.featured .incl li{color:rgba(246,239,230,.85)}
-.incl li::before{content:"✓";position:absolute;left:0;top:6.5px;width:18px;height:18px;border-radius:50%;background:var(--green-soft);color:var(--green);font-size:11px;font-weight:800;display:grid;place-items:center}
-.price-card.featured .incl li::before{background:rgba(232,169,188,.18);color:#E8A9BC}
-.schol{margin-top:18px;padding-top:18px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink-soft)}
-.price-card.featured .schol{border-top-color:rgba(246,239,230,.2);color:rgba(246,239,230,.7)}
-.schol b{color:var(--accent)}
-.price-card.featured .schol b{color:#E8A9BC}
+/* Contact */
+#contact .price-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:start}
+.steps-card{background:var(--ink);color:#F6EFE6;border-radius:22px;padding:38px 36px;box-shadow:var(--shadow)}
+.steps-card h3{font-size:26px;margin-bottom:6px;color:#FBF7EF}
+.steps-card .sub{font-size:14.5px;color:rgba(246,239,230,.7);margin-bottom:26px}
+.steps{list-style:none;counter-reset:step}
+.steps li{counter-increment:step;position:relative;padding:14px 0 14px 56px;border-bottom:1px dashed rgba(246,239,230,.18);font-size:15px;color:rgba(246,239,230,.85)}
+.steps li:last-child{border-bottom:none}
+.steps li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:12px;font-family:var(--serif);font-style:italic;font-size:22px;color:#E8A9BC}
+.steps li b{display:block;color:#FBF7EF;font-size:15.5px;margin-bottom:2px}
+.steps-card .mail-line{margin-top:24px;padding-top:20px;border-top:1px dashed rgba(246,239,230,.18);font-size:14px;color:rgba(246,239,230,.7)}
+.steps-card .mail-line a{color:#E8A9BC;font-weight:600;border-bottom:1px solid rgba(232,169,188,.4)}
+.steps-card .mail-line a:hover{border-bottom-color:#E8A9BC}
 
 /* Form */
 .form-card{background:var(--bg-card);border:1px solid var(--line);border-radius:22px;padding:38px 36px;box-shadow:var(--shadow)}
@@ -244,16 +231,6 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .success p{color:var(--ink-soft);font-size:15px;max-width:380px;margin:0 auto}
 .success .sig{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--accent)}
 
-/* Countdown */
-.count{background:var(--accent);color:#FFF3EA;padding:44px 0}
-.count-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
-.count-title{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;max-width:380px}
-.count-title b{font-style:normal;font-weight:600;display:block;font-size:12px;font-family:var(--sans);letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-bottom:6px}
-.cd-grid{display:flex;gap:14px}
-.cd-cell{background:rgba(255,248,242,.13);border:1px solid rgba(255,248,242,.22);border-radius:14px;min-width:84px;padding:14px 10px;text-align:center}
-.cd-cell b{display:block;font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
-.cd-cell span{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
-
 /* FAQ */
 .faq-list{max-width:780px;margin:0 auto}
 .faq{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:border-color .2s}
@@ -269,9 +246,9 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .final::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(179,48,78,.28),transparent 65%);top:-200px;right:-140px}
 .final::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(201,143,45,.16),transparent 65%);bottom:-190px;left:-120px}
 .final .container{position:relative;z-index:1}
-.final h2{font-size:clamp(2rem,4.4vw,3.3rem);max-width:780px;margin:0 auto 18px}
+.final h2{font-size:clamp(2rem,4.4vw,3.3rem);max-width:820px;margin:0 auto 18px}
 .final h2 em{font-style:italic;color:#E8A9BC;font-weight:500}
-.final p{color:rgba(246,239,230,.72);max-width:540px;margin:0 auto 34px;font-size:16.5px}
+.final p{color:rgba(246,239,230,.72);max-width:560px;margin:0 auto 34px;font-size:16.5px}
 .final .mail{display:inline-block;margin-top:22px;font-size:14.5px;color:rgba(246,239,230,.6)}
 .final .mail a{color:#E8A9BC;font-weight:600;border-bottom:1px solid rgba(232,169,188,.4)}
 .final .mail a:hover{border-bottom-color:#E8A9BC}
@@ -300,7 +277,7 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(3){border-left:none}
   .stat:nth-child(n+3){border-top:1px solid var(--line-soft)}
-  .who-grid,.weeks,.fmt-grid,.mentor-grid,#apply .price-grid{grid-template-columns:1fr}
+  .who-grid,.weeks,.fmt-grid,.mentor-grid,#contact .price-grid{grid-template-columns:1fr}
   .quote-grid{grid-template-columns:1fr}
   .nav-links{display:none}
   .menu-btn{display:block}
@@ -309,10 +286,7 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   .section{padding:68px 0}
   .hero{padding:46px 0 60px}
   .f-row{grid-template-columns:1fr}
-  .cd-grid{width:100%;justify-content:space-between;gap:8px}
-  .cd-cell{min-width:0;flex:1;padding:12px 6px}
-  .cd-cell b{font-size:24px}
-  .price-card,.form-card{padding:28px 22px}
+  .price-card,.form-card,.steps-card{padding:28px 22px}
   .chip-2{right:-4px}
   .doc{transform:translateX(-50%) rotate(-2.5deg)}
 }
@@ -329,12 +303,11 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#who">For whom</a>
-      <a href="#curriculum">Curriculum</a>
-      <a href="#format">Format</a>
+      <a href="#program">Program</a>
+      <a href="#formats">Formats</a>
       <a href="#mentors">Mentors</a>
-      <a href="#teams">For Teams</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="#apply">Apply — Cohort 03</a>
+      <a class="btn btn-primary" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -342,12 +315,11 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
     <a href="#who">For whom</a>
-    <a href="#curriculum">Curriculum</a>
-    <a href="#format">Format</a>
+    <a href="#program">Program</a>
+    <a href="#formats">Formats</a>
     <a href="#mentors">Mentors</a>
-    <a href="#teams">For Teams</a>
     <a href="#faq">FAQ</a>
-    <a class="btn btn-primary" href="#apply">Apply — Cohort 03</a>
+    <a class="btn btn-primary" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call</a>
   </nav>
 </header>
 
@@ -357,14 +329,14 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="badge"><span class="dot"></span> Applications open · Cohort 03 starts 19 Jan 2027</span>
-      <h1 class="h1">From idea to <em>registered business</em> — in six weeks.</h1>
-      <p class="hero-sub">MUT is a part-time bootcamp for people in Germany who are done waiting. Validate your idea, crack the German paperwork, and walk out with a business that's real — registered, priced, and pitched.</p>
+      <span class="badge"><span class="dot"></span> Booking Q1 2027 cohorts — for organizations</span>
+      <h1 class="h1">Your next business idea is <em>already on your payroll.</em></h1>
+      <p class="hero-sub">MUT In-Company is a six-week intrapreneurship program for organizations in Germany. Your people validate real venture ideas with real customers — and pitch funded business cases to your management team.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#apply">Apply for Cohort 03 <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#curriculum">See the 6 weeks</a>
+        <a class="btn btn-primary" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#program">See the 6 weeks</a>
       </div>
-      <p class="hero-meta">Part-time &nbsp;·&nbsp; English-first &nbsp;·&nbsp; Berlin + Düsseldorf + live online</p>
+      <p class="hero-meta">On-site + live online &nbsp;·&nbsp; German or English &nbsp;·&nbsp; 6–12 participants per cohort</p>
     </div>
 
     <div class="hero-visual" aria-hidden="true">
@@ -373,29 +345,29 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 
       <div class="doc">
         <div class="doc-head">
-          <small>Gewerbeamt · Düsseldorf</small>
-          <small>№ 2027/0119</small>
+          <small>Internal Venture Brief</small>
+          <small>Confidential</small>
         </div>
-        <h3>Gewerbeanmeldung</h3>
-        <div class="doc-row"><span>Inhaberin</span><b>You ✓</b></div>
-        <div class="doc-row"><span>Tätigkeit</span><b>Founder</b></div>
-        <div class="doc-row"><span>Rechtsform</span><b>Kleinunternehmerin</b></div>
-        <div class="doc-row"><span>Steuer</span><b>§19 UStG — no VAT juggling</b></div>
-        <div class="doc-status">✓ Angenommen — see you at Demo Day</div>
-        <div class="stamp">FOUNDED<br>·<br>2027</div>
+        <h3>Venture Case № 03</h3>
+        <div class="doc-row"><span>Team</span><b>4 employees ✓</b></div>
+        <div class="doc-row"><span>Validation</span><b>14 customer interviews</b></div>
+        <div class="doc-row"><span>Business case</span><b>Priced &amp; ROI-positive</b></div>
+        <div class="doc-row"><span>Ask</span><b>Pilot budget · Q2</b></div>
+        <div class="doc-status">✓ Approved by management — pilot starts Monday</div>
+        <div class="stamp">Validated<br>·<br>2027</div>
       </div>
 
       <div class="chip-card chip-1">
-        <div class="chip-ico">🧾</div>
-        <div>First invoice sent<small>+ €1,450 this month</small></div>
+        <div class="chip-ico">📊</div>
+        <div>Business case approved<small>evidence, not opinions</small></div>
       </div>
       <div class="chip-card chip-2">
-        <div class="chip-ico">📝</div>
-        <div>Paperwork pack filed<small>Gewerbe · Steuer · insurance</small></div>
+        <div class="chip-ico">🚀</div>
+        <div>Pilot budget released<small>decision in week 6</small></div>
       </div>
       <div class="chip-card chip-3">
         <div class="chip-ico">🎤</div>
-        <div>Demo Day ticket<small>27 Feb 2027 · on stage</small></div>
+        <div>Demo Day<small>your management, in the room</small></div>
       </div>
     </div>
   </div>
@@ -404,18 +376,18 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <!-- ============ STATS ============ -->
 <div class="stats">
   <div class="container stats-grid">
-    <div class="stat"><b>6 <i>weeks</i></b><span>part-time, designed around a job</span></div>
-    <div class="stat"><b>18 <i>sessions</i></b><span>live evenings + Saturday workshops</span></div>
-    <div class="stat"><b>12 <i>seats</i></b><span>small cohort, real relationships</span></div>
-    <div class="stat"><b>2 <i>scholarships</i></b><span>impact seats, every cohort</span></div>
+    <div class="stat"><b>6 <i>weeks</i></b><span>part-time, beside the day job</span></div>
+    <div class="stat"><b>6–12 <i>people</i></b><span>per in-house cohort</span></div>
+    <div class="stat"><b>3 <i>formats</i></b><span>cohort · sprint · workshop</span></div>
+    <div class="stat"><b>DE <i>+ EN</i></b><span>same program, either language</span></div>
   </div>
 </div>
 
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="mq-track">
-    <span>MUT</span><span>Gründer*innen</span><span>Neuanfang</span><span>By founders — for founders</span><span>Gewerbe? Gewerblich.</span><span>Made in Germany</span>
-    <span>MUT</span><span>Gründer*innen</span><span>Neuanfang</span><span>By founders — for founders</span><span>Gewerbe? Gewerblich.</span><span>Made in Germany</span>
+    <span>MUT</span><span>Gründer*innen</span><span>Neuanfang</span><span>Teams ship, decks don't</span><span>Intrapreneurship</span><span>Made in Germany</span>
+    <span>MUT</span><span>Gründer*innen</span><span>Neuanfang</span><span>Teams ship, decks don't</span><span>Intrapreneurship</span><span>Made in Germany</span>
   </div>
 </div>
 
@@ -423,131 +395,134 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <section class="section" id="who">
   <div class="container">
     <div class="section-head rv">
-      <span class="eyebrow">01 · Who it's for</span>
-      <h2 class="h2">You'll recognize yourself in <em>at least one</em> of these.</h2>
-      <p class="lede">MUT works best for first-time founders at the very beginning — idea-stage or almost-registered. Not yet for scaling a seven-figure GmbH.</p>
+      <span class="eyebrow">01 · For whom</span>
+      <h2 class="h2">Built for the people who <em>move organizations.</em></h2>
+      <p class="lede">MUT In-Company works when a real team with a real mandate books it. Typically that's one of these three.</p>
     </div>
     <div class="who-grid">
       <div class="who-card rv">
-        <div class="who-emoji">📝</div>
-        <h3>The Maybe-Someday</h3>
-        <p>The idea has lived in your notes app for two years. You don't need more motivation — you need a deadline, a structure, and eleven founders who notice when you don't show up.</p>
+        <div class="who-emoji">🚀</div>
+        <h3>New-Business &amp; Innovation</h3>
+        <p>You've been tasked with building a new line, product, or segment — and the quarter is already full. We give your team a six-week engine that turns strategy decks into validated business cases.</p>
       </div>
       <div class="who-card rv" data-d="1">
-        <div class="who-emoji">💼</div>
-        <h3>The Side-Hustler</h3>
-        <p>You have a job, a payslip, and a quiet feeling there's more. We'll show you how to found <i>nebenberuflich</i> — safely, legally, step by step, without torching your contract.</p>
+        <div class="who-emoji">🌱</div>
+        <h3>HR &amp; People Development</h3>
+        <p>Another e-learning course nobody finishes? This is L&amp;D people talk about: participants leave with founder skills — validation, pricing, pitching — and a venture they actually built.</p>
       </div>
       <div class="who-card rv" data-d="2">
-        <div class="who-emoji">🌍</div>
-        <h3>The New-in-Germany</h3>
-        <p>New country, new rules. Gewerbe? Freiberufler? Kleinunternehmerregelung? We translate German bureaucracy into plain English — with the forms, in the right order.</p>
+        <div class="who-emoji">🔄</div>
+        <h3>Transformation Leads</h3>
+        <p>Culture change doesn't come from posters. A cohort of intrapreneurs who shipped something real changes how the whole organization thinks about risk and initiative.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CURRICULUM ============ -->
-<section class="section" id="curriculum">
+<!-- ============ PROGRAM ============ -->
+<section class="section" id="program">
   <div class="container">
     <div class="section-head center rv">
-      <span class="eyebrow">02 · Curriculum</span>
-      <h2 class="h2">Six weeks. One <em>registered, revenue-ready</em> business.</h2>
-      <p class="lede">Every week ends with a concrete deliverable. By Demo Day you hold a filed (or filing-ready) registration, a price list, and a pitch you've actually given.</p>
+      <span class="eyebrow">02 · Program</span>
+      <h2 class="h2">Six weeks. One <em>validated, funded</em> business case.</h2>
+      <p class="lede">Your people keep their day jobs. One evening cohort rhythm plus coaching — and every week ends with evidence your management can actually decide on.</p>
     </div>
     <div class="weeks">
       <div class="week rv">
         <span class="week-num">Week 01 — Decide</span>
-        <h3>From idea fog to one idea</h3>
+        <h3>From idea fog to one venture</h3>
         <ul>
-          <li>Skills → idea mapping, the German market lens</li>
-          <li>Kill your three worst ideas (on purpose)</li>
-          <li>Cohort match: your accountability trio</li>
+          <li>Map team skills to company strategy</li>
+          <li>Kill weak ideas early — on purpose</li>
+          <li>Align sponsors &amp; success criteria</li>
         </ul>
-        <div class="week-out">One-idea one-pager you'd bet a Saturday on.</div>
+        <div class="week-out">One venture idea with a named sponsor and a one-pager.</div>
       </div>
       <div class="week rv" data-d="1">
         <span class="week-num">Week 02 — Validate</span>
-        <h3>Evidence, not compliments</h3>
+        <h3>Evidence, not opinions</h3>
         <ul>
-          <li>10 real customer conversations (scripted)</li>
-          <li>A €0 landing-page demand test</li>
+          <li>10+ real customer conversations (scripted)</li>
+          <li>A €0 demand test on the real market</li>
           <li>Go / pivot / kill — decided with data</li>
         </ul>
-        <div class="week-out">A validation folder: what people will pay for, and proof.</div>
+        <div class="week-out">A validation folder: what customers will pay for, with proof.</div>
       </div>
       <div class="week rv" data-d="2">
-        <span class="week-num">Week 03 — Earn</span>
-        <h3>Pricing & the money math</h3>
+        <span class="week-num">Week 03 — Model</span>
+        <h3>Pricing &amp; the money math</h3>
         <ul>
-          <li>Value-based pricing for German customers</li>
-          <li>Revenue math: break-even, runway, side-income</li>
-          <li>Your first offer, written and priced</li>
+          <li>Business model options, priced</li>
+          <li>ROI math your CFO will respect</li>
+          <li>Make-or-buy and cannibalization checks</li>
         </ul>
-        <div class="week-out">A price list and one offer you can sell this month.</div>
+        <div class="week-out">A priced offer and a business model the numbers support.</div>
       </div>
       <div class="week rv">
-        <span class="week-num">Week 04 — Register</span>
-        <h3>German paperwork, demystified</h3>
+        <span class="week-num">Week 04 — Build the case</span>
+        <h3>The corporate paperwork, demystified</h3>
         <ul>
-          <li>Gewerbe vs. Freiberufler — which one are you?</li>
-          <li>Kleinunternehmerregelung, taxes, insurance</li>
-          <li>Visa & residence-permit map for non-EU founders</li>
+          <li>Business case in your company's format</li>
+          <li>Stakeholder map: who says yes, who blocks</li>
+          <li>Budget, legal, and compliance pre-checks</li>
         </ul>
-        <div class="week-out">A paperwork pack ready to file — forms filled, in order.</div>
+        <div class="week-out">A business case pack ready for your internal approvals.</div>
       </div>
       <div class="week rv" data-d="1">
         <span class="week-num">Week 05 — Show up</span>
-        <h3>Brand & first customers</h3>
+        <h3>Prototype &amp; internal story</h3>
         <ul>
-          <li>Positioning: the one sentence you're known for</li>
-          <li>Simple site + presence that doesn't take months</li>
-          <li>The outreach engine: 20 warm conversations</li>
+          <li>A landing page or prototype customers touch</li>
+          <li>The one sentence the venture is known for</li>
+          <li>20 stakeholder &amp; customer conversations</li>
         </ul>
-        <div class="week-out">A launch-ready presence and your first outreach batch sent.</div>
+        <div class="week-out">Something people can see, use, and remember.</div>
       </div>
       <div class="week rv" data-d="2">
-        <span class="week-num">Week 06 — Launch</span>
-        <h3>Pitch & Demo Day</h3>
+        <span class="week-num">Week 06 — Decide</span>
+        <h3>Demo Day with management</h3>
         <ul>
-          <li>Your 3-minute pitch, rehearsed with feedback</li>
-          <li>The 90-day plan after the bootcamp</li>
-          <li>Demo Day: on stage, in front of a real room</li>
+          <li>The 3-minute pitch, rehearsed with feedback</li>
+          <li>Decision ask: pilot, budget, owners</li>
+          <li>The 90-day implementation plan</li>
         </ul>
-        <div class="week-out">A pitch on stage — and a community that answers at 11pm.</div>
+        <div class="week-out">A yes/no/iterate decision from management — in the room.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FORMAT ============ -->
-<section class="section" id="format">
+<!-- ============ FORMATS ============ -->
+<section class="section" id="formats">
   <div class="container">
     <div class="section-head rv">
-      <span class="eyebrow">03 · Format</span>
-      <h2 class="h2">A rhythm you can keep — <em>beside</em> a job, kids, and a life.</h2>
-      <p class="lede">Part-time by design. Two evenings and one Saturday per week, plus 2–4 focused hours in between. Everything is recorded, everything in English first.</p>
+      <span class="eyebrow">03 · Formats</span>
+      <h2 class="h2">Three ways to bring MUT <em>inside.</em></h2>
+      <p class="lede">From a full six-week cohort to a one-day workshop. Every format ends in evidence and a decision — never a deck that dies in a drawer.</p>
     </div>
     <div class="fmt-grid">
       <div class="fmt-card rv">
-        <span class="fmt-tag">Tue + Thu · 19:00–21:00</span>
-        <h3>Live evening sessions</h3>
-        <p>Teaching + hot-seat coaching on Zoom. Cameras on, egos off. Your questions get answered live — not in a forum, next week.</p>
+        <span class="fmt-tag">6 weeks · in-house</span>
+        <h3>Intrapreneurship cohort</h3>
+        <p>The full six-week engine for 6–12 employees. Kick-off on-site, weekly live sessions, coaching, and your own Demo Day with management on the final day.</p>
+        <div class="fmt-price">from €14,800 per cohort<span>custom pricing — volume &amp; non-profit arrangements possible</span></div>
       </div>
       <div class="fmt-card rv" data-d="1">
-        <span class="fmt-tag">Saturdays · 10:00–14:00</span>
-        <h3>In-person workshops</h3>
-        <p>Hands-on workdays in Berlin & Düsseldorf (streamed if you're far). This is where ideas stop being theoretical — and where friendships start.</p>
+        <span class="fmt-tag">2 days + 6 weeks</span>
+        <h3>Innovation sprint</h3>
+        <p>Two-day intensive, then six part-time weeks beside the day job. Built around one strategic question — a new product line, customer segment, or market entry.</p>
+        <div class="fmt-price">from €9,800 per sprint<span>up to 20 participants, one venture question</span></div>
       </div>
       <div class="fmt-card rv" data-d="2">
-        <span class="fmt-tag">In between</span>
-        <h3>Templates & doing the work</h3>
-        <p>Bilingual templates for everything: interview scripts, invoice, contract, pitch deck. You don't start from a blank page. Ever.</p>
+        <span class="fmt-tag">Half or full day</span>
+        <h3>Workshops &amp; keynotes</h3>
+        <p>A concentrated shot of founder method for offsites, conferences, and L&amp;D programs. Most requested topic: how to validate an idea without a budget.</p>
+        <div class="fmt-price">from €2,400 per day<span>up to 40 participants, on-site or remote</span></div>
       </div>
     </div>
     <div class="fmt-note rv">
-      <span class="ic">🎥</span>
-      Life happens — kids get sick, jobs get busy. Every session is recorded, and your trio catches you up. Nobody falls out quietly.
+      <span class="ic">💰</span>
+      German funding check: employee upskilling may be subsidized under the Qualifizierungschancengesetz — we help you check before you commit.
     </div>
   </div>
 </section>
@@ -558,28 +533,28 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
     <div class="section-head center rv">
       <span class="eyebrow">04 · Mentors</span>
       <h2 class="h2">Mentors who've <em>actually done it</em> — in Germany.</h2>
-      <p class="lede">Not keynote speakers. Practitioners who register businesses, file taxes, and win customers in the German market — and teach you exactly how.</p>
+      <p class="lede">Not keynote speakers. Practitioners who validate businesses, win customers, and unlock funding in the German market — teaching your people exactly how.</p>
     </div>
     <div class="mentor-grid">
       <div class="mentor rv">
         <div class="avatar">AS</div>
         <h3>Dr. Anke Sommer</h3>
-        <div class="role">Tax & Legal · Steuerberaterin</div>
-        <p>Walked 400+ founders through their first Gewerbeanmeldung. Decodes the Finanzamt so you can sleep.</p>
-        <q>Taxes. Only funnier.</q>
+        <div class="role">Business Case &amp; Finance</div>
+        <p>Former corporate controller, now venture advisor. Turns validation data into business cases CFOs sign off on.</p>
+        <q>Numbers tell the story. Only funnier.</q>
       </div>
       <div class="mentor rv" data-d="1">
         <div class="avatar">MO</div>
         <h3>Marlene Okafor</h3>
-        <div class="role">Brand & First Customers</div>
+        <div class="role">Brand &amp; First Customers</div>
         <p>Founded two D2C brands in Berlin. Teaches positioning and outreach that gets replies — without ad budgets.</p>
         <q>Your first 10 customers don't come from ads.</q>
       </div>
       <div class="mentor rv" data-d="2">
         <div class="avatar">JB</div>
         <h3>Jonas Brandt</h3>
-        <div class="role">Funding & Grants</div>
-        <p>Coach for Gründungszuschuss, EXIST and KfW programs. Free money exists — he knows which forms unlock it.</p>
+        <div class="role">Funding &amp; Grants</div>
+        <p>Coach for EXIST, KfW, and innovation programs. Free money exists — he knows which forms unlock it.</p>
         <q>Germany will fund your idea. Seriously.</q>
       </div>
     </div>
@@ -591,85 +566,45 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   <div class="container">
     <div class="section-head rv">
       <span class="eyebrow">05 · Voices</span>
-      <h2 class="h2">Cohort 02, <em>six months later.</em></h2>
+      <h2 class="h2">What clients say <em>after Demo Day.</em></h2>
     </div>
     <div class="quote-grid">
       <div class="quote rv">
-        <p>I arrived with a folder of screenshots and a half-written plan. Six weeks later I had a registered Gewerbe and my first three paying clients.</p>
-        <footer><b>Priya R.</b> · Career coach · Cohort 02 · Leipzig</footer>
+        <p>Six weeks, one validated business case, a pilot budget. Normally that takes a quarter — and dies in a deck.</p>
+        <footer><b>M. Weber</b> · Innovation Lead · mid-size logistics · Hamburg</footer>
       </div>
       <div class="quote rv" data-d="1">
-        <p>Week 4 alone was worth the price. Nine years in Germany, and finally someone explained the Kleinunternehmerregelung in plain English.</p>
-        <footer><b>Daniel K.</b> · Street food & catering · Cohort 02 · Köln</footer>
+        <p>The best L&amp;D investment we made last year. Three of our people now run internal ventures — and the waiting list for the next cohort is internal.</p>
+        <footer><b>S. Yilmaz</b> · Head of People · software scale-up · Berlin</footer>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FOR TEAMS ============ -->
-<section class="section" id="teams">
-  <div class="container">
-    <div class="section-head rv">
-      <span class="eyebrow">06 · For Teams</span>
-      <h2 class="h2">Your next business idea is <em>already on your payroll.</em></h2>
-      <p class="lede">MUT In-Company brings the same six-week engine inside your organization — for teams building new ventures, new offerings, or a genuinely new way of working.</p>
-    </div>
-    <div class="fmt-grid">
-      <div class="fmt-card rv">
-        <span class="fmt-tag">6 weeks · in-house</span>
-        <h3>Intrapreneurship cohort</h3>
-        <p>A full MUT cohort run inside your company: up to 12 employees validate internal venture ideas with real customers — and pitch validated business cases to management at their own Demo Day.</p>
-      </div>
-      <div class="fmt-card rv" data-d="1">
-        <span class="fmt-tag">2 days + 6 weeks</span>
-        <h3>Innovation sprint</h3>
-        <p>Start with a two-day intensive, then six part-time weeks beside the day job. Built around one strategic question — a new product line, customer segment, or market.</p>
-      </div>
-      <div class="fmt-card rv" data-d="2">
-        <span class="fmt-tag">Half or full day</span>
-        <h3>Workshops & keynotes</h3>
-        <p>A concentrated shot of founder method for offsites, conferences, and L&amp;D programs. Most requested topic: how to validate an idea without a budget.</p>
-      </div>
-    </div>
-    <div class="teams-points">
-      <div class="rv"><b>Teams ship, decks don't.</b> Every track ends in validation evidence, a priced offer, and an internal pitch — not a slide deck that dies in a drawer.</div>
-      <div class="rv" data-d="1"><b>L&amp;D that pays back.</b> Participants leave with founder skills — validation, pricing, pitching — that stay in your organization.</div>
-      <div class="rv" data-d="2"><b>German funding check.</b> Employee upskilling may be subsidized under the Qualifizierungschancengesetz. We help you check before you commit.</div>
-    </div>
-    <div class="teams-cta rv">
-      <a class="btn btn-primary" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call <span class="arr">→</span></a>
-      <span class="teams-mail">German or English — same price. Custom pricing per team; we reply within 48 hours.</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PRICING + APPLY ============ -->
-<section class="section" id="apply">
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
   <div class="container">
     <div class="section-head center rv">
-      <span class="eyebrow">07 · Apply</span>
-      <h2 class="h2">One price. <em>Everything</em> in.</h2>
-      <p class="lede">Cohort 03 · 19 January – 27 February 2027 · 12 seats. Applications close 15 December 2026.</p>
+      <span class="eyebrow">06 · Contact</span>
+      <h2 class="h2">Start with a <em>30-minute call.</em></h2>
+      <p class="lede">No slides on the first call. You tell us your goal, we tell you honestly whether MUT fits — and which format.</p>
     </div>
     <div class="price-grid">
-      <div class="price-card featured rv">
-        <div class="price-lab">Early Bird · until 30 Nov</div>
-        <div class="price-num">€490<sup>*</sup></div>
-        <div class="price-note">* or 3 × €165/month — no extra cost. From 1 Dec: €690.</div>
-        <ul class="incl">
-          <li>All 18 live sessions + all Saturday workshops</li>
-          <li>Bilingual template pack (invoice, contract, pitch deck, forms)</li>
-          <li>Weekly hot-seat coaching on your exact situation</li>
-          <li>Demo Day on stage + invite-only alumni network</li>
-          <li>Partner perks: tax software, co-working days, legal check</li>
-        </ul>
-        <div class="schol"><b>2 scholarship seats</b> per cohort for founders who need them. Write "scholarship" in your application — no drama, no forms theater.</div>
+      <div class="steps-card rv">
+        <h3>What happens next</h3>
+        <p class="sub">Three steps from first mail to kick-off. Typically under four weeks.</p>
+        <ol class="steps">
+          <li><b>Intro call — 30 minutes.</b>We listen: your goal, your people, your calendar. Zero pitch, zero pressure.</li>
+          <li><b>Tailored proposal — within a week.</b>Format, dates, price, and a program outline mapped to your strategic question.</li>
+          <li><b>Kick-off.</b>We run the program inside your organization. You get a short weekly pulse update — nothing more to manage.</li>
+        </ol>
+        <div class="mail-line">Prefer email? <a href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">hello@mut.camp</a> — we reply within 48 hours.</div>
       </div>
 
       <div class="form-card rv" data-d="1" id="formCard">
-        <h3>Request your seat</h3>
-        <p class="sub">Two minutes. We read every application personally and reply within 48 hours.</p>
-        <form id="applyForm" novalidate>
+        <h3>Request a proposal</h3>
+        <p class="sub">Two minutes. Tells us enough to make the first call useful.</p>
+        <form id="contactForm" novalidate>
           <div class="f-row">
             <div class="f-group">
               <label for="fName">Full name</label>
@@ -677,40 +612,51 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
               <span class="f-err">Please tell us your name.</span>
             </div>
             <div class="f-group">
-              <label for="fEmail">Email</label>
-              <input id="fEmail" type="email" autocomplete="email" placeholder="jane@email.de">
+              <label for="fEmail">Work email</label>
+              <input id="fEmail" type="email" autocomplete="email" placeholder="jane@company.de">
               <span class="f-err">That email doesn't look right.</span>
             </div>
           </div>
           <div class="f-row">
             <div class="f-group">
-              <label for="fCity">City</label>
-              <input id="fCity" type="text" autocomplete="address-level2" placeholder="Düsseldorf">
-              <span class="f-err">Where are you based?</span>
+              <label for="fCompany">Company</label>
+              <input id="fCompany" type="text" autocomplete="organization" placeholder="Acme GmbH">
+              <span class="f-err">Which organization are you with?</span>
             </div>
             <div class="f-group">
-              <label for="fStage">Where are you right now?</label>
-              <select id="fStage">
+              <label for="fRole">Your role</label>
+              <select id="fRole">
                 <option value="">Choose…</option>
-                <option>Idea & research</option>
-                <option>Already earning on the side</option>
-                <option>Ready to register</option>
-                <option>Registered — now grow</option>
+                <option>Innovation / Strategy</option>
+                <option>HR / People Development</option>
+                <option>Executive team</option>
+                <option>Other</option>
               </select>
               <span class="f-err">Pick the closest fit.</span>
             </div>
           </div>
           <div class="f-group">
-            <label for="fMsg">Anything we should know? <span style="font-weight:500;color:var(--ink-faint)">(optional)</span></label>
-            <textarea id="fMsg" placeholder="Scholarship? Kids on Saturdays? A question you want answered first?"></textarea>
+            <label for="fFormat">Which format interests you?</label>
+            <select id="fFormat">
+              <option value="">Choose…</option>
+              <option>Intrapreneurship cohort (6 weeks)</option>
+              <option>Innovation sprint (2 days + 6 weeks)</option>
+              <option>Workshop / keynote</option>
+              <option>Not sure yet — advise us</option>
+            </select>
+            <span class="f-err">Pick one — "not sure yet" is a valid answer.</span>
           </div>
-          <button class="btn btn-primary" type="submit">Send application <span class="arr">→</span></button>
-          <p class="form-fine">No spam, no newsletter avalanche. Just one personal reply.</p>
+          <div class="f-group">
+            <label for="fMsg">What would you like to achieve? <span style="font-weight:500;color:var(--ink-faint)">(optional)</span></label>
+            <textarea id="fMsg" placeholder="One or two sentences about the goal, the people, or the timing."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Request a proposal <span class="arr">→</span></button>
+          <p class="form-fine">No newsletter, no follow-up sequence. One personal reply.</p>
         </form>
         <div class="success" id="successBox">
           <div class="big">✓</div>
-          <h3>Application received.</h3>
-          <p>Thank you — we read every single application personally and you'll hear from us within 48 hours.</p>
+          <h3>Request received.</h3>
+          <p>Thank you — we read every request personally and you'll hear from us within 48 hours to schedule your intro call.</p>
           <div class="sig">— Team MUT</div>
         </div>
       </div>
@@ -718,50 +664,37 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   </div>
 </section>
 
-<!-- ============ COUNTDOWN ============ -->
-<div class="count">
-  <div class="container count-inner">
-    <div class="count-title"><b>Cohort 03 · 12 seats</b>Applications close 15 December 2026 — the early bird closes even sooner.</div>
-    <div class="cd-grid" id="cdGrid" role="timer" aria-label="Time until applications close">
-      <div class="cd-cell"><b id="cdD">--</b><span>days</span></div>
-      <div class="cd-cell"><b id="cdH">--</b><span>hrs</span></div>
-      <div class="cd-cell"><b id="cdM">--</b><span>min</span></div>
-      <div class="cd-cell"><b id="cdS">--</b><span>sec</span></div>
-    </div>
-  </div>
-</div>
-
 <!-- ============ FAQ ============ -->
 <section class="section" id="faq">
   <div class="container">
     <div class="section-head center rv">
-      <span class="eyebrow">08 · FAQ</span>
+      <span class="eyebrow">07 · FAQ</span>
       <h2 class="h2">Fair questions. <em>Direct answers.</em></h2>
     </div>
     <div class="faq-list">
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">Do I need a business idea already?<span class="plus">+</span></button>
-        <div class="faq-a"><p>No — about a third of every cohort arrives with "a few half-ideas." Week 1 exists exactly for this: you'll map your skills to the German market, kill weak ideas early, and leave with one idea you can actually test. What you do need is seriousness: 6–8 hours a week for six weeks.</p></div>
+        <button class="faq-q" aria-expanded="false">German or English?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Either — your choice, per cohort. Materials are bilingual (DE/EN) by default, and mixed-language groups work well in practice. The German market context (customers, funding, legal pre-checks) is part of the program either way.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">Is it in English or German?<span class="plus">+</span></button>
-        <div class="faq-a"><p>English-first — sessions, materials, and community. All templates come bilingually (EN/DE) because the Finanzamt doesn't do English. Several mentors teach in both languages, and every German bureaucratic term is explained in plain English before you ever touch a form.</p></div>
+        <button class="faq-q" aria-expanded="false">On-site, remote, or hybrid?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Hybrid by design: kick-off and Demo Day on-site at your office, weekly sessions live online. This keeps travel costs low and the day job alive. Full-remote is possible; full on-site is possible for sprints and workshops.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">Can I join while employed full-time?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Yes — the program is built for it. Most of our founders start nebenberuflich (part-time self-employed alongside a job). We cover what your employment contract might allow, how to found cleanly, and how Gründungszuschuss works if you're registered as unemployed and planning to found.</p></div>
+        <button class="faq-q" aria-expanded="false">Who should participate?<span class="plus">+</span></button>
+        <div class="faq-a"><p>6–12 people per cohort: a deliberate mix of builders, domain experts, and one sponsor with budget authority per venture. Participants need roughly 4–6 hours per week beside their day job — we help you plan capacity before you commit.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">I'm not an EU citizen. Can I still found a business in Germany?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Often yes — it depends on your residence permit. Week 4 includes a clear map of which permits allow self-employment and what the steps look like. We're not immigration lawyers, but you'll leave knowing exactly which questions to ask, at which Amt, with which documents.</p></div>
+        <button class="faq-q" aria-expanded="false">What happens to the ideas and the IP?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Everything stays yours. We work under NDA by default, all material generated in the program belongs to your organization, and ventures are internal by design. If a venture should spin out instead, we help structure that — but it's your call, not ours.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">What if I miss a session — kids, work, life?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Every session is recorded with notes and templates. Your accountability trio keeps you moving, and mentors answer async questions between sessions. Saturday workshops are in-person in Berlin & Düsseldorf but always streamed. Cohort 02's highest attendance? A parent of two.</p></div>
+        <button class="faq-q" aria-expanded="false">Can we get funding for the program?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Often, yes. Employee upskilling may be subsidized under the Qualifizierungschancengesetz; in some states additional programs apply. We run a short funding check with you before the proposal, so you know your net cost before signing anything.</p></div>
       </div>
       <div class="faq rv">
-        <button class="faq-q" aria-expanded="false">What if it's not for me — refunds?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Full refund until two weeks before Cohort 03 starts (5 Jan 2027), no questions, no forms theater. After that, you can switch to the next cohort once, free. We'd rather have a founder in the right cohort than a payment in the wrong one.</p></div>
+        <button class="faq-q" aria-expanded="false">What if no venture survives validation?<span class="plus">+</span></button>
+        <div class="faq-a"><p>That's a real outcome — and a cheap one. Killing a weak idea in week 2 with evidence costs a fraction of killing it in month 9 with a budget. Teams that hit a dead end pivot within the program; the skills and the customer insight stay either way.</p></div>
       </div>
     </div>
   </div>
@@ -770,9 +703,9 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <!-- ============ FINAL CTA ============ -->
 <section class="final">
   <div class="container">
-    <h2 class="rv">Next January you're either still thinking about it — or <em>you've founded.</em></h2>
-    <p class="rv">Cohort 03 starts 19 January 2027. Twelve founders. Six weeks. One registered business — yours.</p>
-    <a class="btn btn-light rv" href="#apply">Apply for Cohort 03 <span class="arr">→</span></a>
+    <h2 class="rv">Your competitors are running innovation theater. You could be running <em>a pilot.</em></h2>
+    <p class="rv">One 30-minute call. We tell you honestly whether MUT fits your organization — and if it doesn't, we say so.</p>
+    <a class="btn btn-light rv" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call <span class="arr">→</span></a>
     <div class="mail">Questions first? <a href="mailto:hello@mut.camp">hello@mut.camp</a></div>
   </div>
 </section>
@@ -784,10 +717,9 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   <div class="container foot">
     <a class="logo" href="#top"><span class="logo-mark">✳</span> <span>MUT</span></a>
     <nav class="foot-links" aria-label="Footer">
-      <a href="#curriculum">Curriculum</a>
-      <a href="#faq">FAQ</a>
-      <a href="#apply">Apply</a>
-      <a href="#teams">For Teams</a>
+      <a href="#program">Program</a>
+      <a href="#formats">Formats</a>
+      <a href="#contact">Contact</a>
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
     </nav>
@@ -821,7 +753,6 @@ document.querySelectorAll('.faq-q').forEach(function(btn) {
     var item = btn.parentElement;
     var body = item.querySelector('.faq-a');
     var isOpen = item.classList.contains('open');
-    // close others
     document.querySelectorAll('.faq.open').forEach(function(o) {
       o.classList.remove('open');
       o.querySelector('.faq-a').style.maxHeight = null;
@@ -848,26 +779,8 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: 0.12 });
 document.querySelectorAll('.rv').forEach(function(el) { observer.observe(el); });
 
-// ---------- Countdown to application deadline ----------
-var deadline = new Date('2026-12-15T23:59:59+01:00').getTime();
-function pad(n) { return String(n).padStart(2, '0'); }
-function tick() {
-  var diff = deadline - Date.now();
-  var el = { d: document.getElementById('cdD'), h: document.getElementById('cdH'), m: document.getElementById('cdM'), s: document.getElementById('cdS') };
-  if (diff <= 0) {
-    document.getElementById('cdGrid').innerHTML = '<div class="cd-cell" style="padding:16px 22px"><b>Closed</b><span>join waitlist</span></div>';
-    return;
-  }
-  el.d.textContent = Math.floor(diff / 86400000);
-  el.h.textContent = pad(Math.floor(diff / 3600000) % 24);
-  el.m.textContent = pad(Math.floor(diff / 60000) % 60);
-  el.s.textContent = pad(Math.floor(diff / 1000) % 60);
-  setTimeout(tick, 1000);
-}
-tick();
-
-// ---------- Application form ----------
-var form = document.getElementById('applyForm');
+// ---------- Contact form ----------
+var form = document.getElementById('contactForm');
 form.addEventListener('submit', function(ev) {
   ev.preventDefault();
   var ok = true;
@@ -880,29 +793,30 @@ form.addEventListener('submit', function(ev) {
   }
   need('fName', function(v) { return v.length > 1; });
   need('fEmail', function(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); });
-  need('fCity', function(v) { return v.length > 0; });
-  need('fStage', function(v) { return v.length > 0; });
+  need('fCompany', function(v) { return v.length > 0; });
+  need('fRole', function(v) { return v.length > 0; });
+  need('fFormat', function(v) { return v.length > 0; });
   if (!ok) return;
 
-  var application = {
+  var inquiry = {
     name: document.getElementById('fName').value.trim(),
     email: document.getElementById('fEmail').value.trim(),
-    city: document.getElementById('fCity').value.trim(),
-    stage: document.getElementById('fStage').value,
+    company: document.getElementById('fCompany').value.trim(),
+    role: document.getElementById('fRole').value,
+    format: document.getElementById('fFormat').value,
     message: document.getElementById('fMsg').value.trim(),
     at: new Date().toISOString()
   };
   try {
     var all = JSON.parse(localStorage.getItem('mut_applications') || '[]');
-    all.push(application);
+    all.push(inquiry);
     localStorage.setItem('mut_applications', JSON.stringify(all));
   } catch (e) { /* storage unavailable — still show success */ }
 
   form.style.display = 'none';
   document.getElementById('successBox').classList.add('show');
 });
-// clear error state while typing
-document.querySelectorAll('#applyForm input, #applyForm select').forEach(function(el) {
+document.querySelectorAll('#contactForm input, #contactForm select').forEach(function(el) {
   el.addEventListener('input', function() {
     el.closest('.f-group').classList.remove('invalid');
   });
