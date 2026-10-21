@@ -1,6 +1,6 @@
-# FoundHer
+# MUT
 
-Landing page for a 6-week entrepreneurship bootcamp for women in Germany.
+Landing page for MUT — a 6-week, all-genders entrepreneurship bootcamp for first-time founders in Germany.
 
 **Live site:** https://maychongko.github.io/foundher/
 
