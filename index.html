@@ -168,6 +168,13 @@ header.scrolled{border-bottom-color:var(--line-soft)}
 .fmt-note{display:flex;gap:12px;align-items:center;background:var(--green-soft);border-radius:14px;padding:16px 20px;font-size:14.5px;font-weight:600;color:var(--green)}
 .fmt-note .ic{font-size:19px}
 
+/* Teams (in-company) */
+.teams-points{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:26px 0 8px}
+.teams-points div{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;font-size:14.3px;color:var(--ink-soft);line-height:1.55}
+.teams-points b{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+.teams-cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:26px}
+.teams-mail{font-size:13.5px;font-weight:600;color:var(--ink-faint)}
+
 /* Mentors */
 .mentor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .mentor{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;text-align:center}
@@ -325,6 +332,7 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
       <a href="#curriculum">Curriculum</a>
       <a href="#format">Format</a>
       <a href="#mentors">Mentors</a>
+      <a href="#teams">For Teams</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn-primary" href="#apply">Apply — Cohort 03</a>
     </nav>
@@ -337,6 +345,7 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
     <a href="#curriculum">Curriculum</a>
     <a href="#format">Format</a>
     <a href="#mentors">Mentors</a>
+    <a href="#teams">For Teams</a>
     <a href="#faq">FAQ</a>
     <a class="btn btn-primary" href="#apply">Apply — Cohort 03</a>
   </nav>
@@ -597,11 +606,48 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
   </div>
 </section>
 
+<!-- ============ FOR TEAMS ============ -->
+<section class="section" id="teams">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">06 · For Teams</span>
+      <h2 class="h2">Your next business idea is <em>already on your payroll.</em></h2>
+      <p class="lede">MUT In-Company brings the same six-week engine inside your organization — for teams building new ventures, new offerings, or a genuinely new way of working.</p>
+    </div>
+    <div class="fmt-grid">
+      <div class="fmt-card rv">
+        <span class="fmt-tag">6 weeks · in-house</span>
+        <h3>Intrapreneurship cohort</h3>
+        <p>A full MUT cohort run inside your company: up to 12 employees validate internal venture ideas with real customers — and pitch validated business cases to management at their own Demo Day.</p>
+      </div>
+      <div class="fmt-card rv" data-d="1">
+        <span class="fmt-tag">2 days + 6 weeks</span>
+        <h3>Innovation sprint</h3>
+        <p>Start with a two-day intensive, then six part-time weeks beside the day job. Built around one strategic question — a new product line, customer segment, or market.</p>
+      </div>
+      <div class="fmt-card rv" data-d="2">
+        <span class="fmt-tag">Half or full day</span>
+        <h3>Workshops & keynotes</h3>
+        <p>A concentrated shot of founder method for offsites, conferences, and L&amp;D programs. Most requested topic: how to validate an idea without a budget.</p>
+      </div>
+    </div>
+    <div class="teams-points">
+      <div class="rv"><b>Teams ship, decks don't.</b> Every track ends in validation evidence, a priced offer, and an internal pitch — not a slide deck that dies in a drawer.</div>
+      <div class="rv" data-d="1"><b>L&amp;D that pays back.</b> Participants leave with founder skills — validation, pricing, pitching — that stay in your organization.</div>
+      <div class="rv" data-d="2"><b>German funding check.</b> Employee upskilling may be subsidized under the Qualifizierungschancengesetz. We help you check before you commit.</div>
+    </div>
+    <div class="teams-cta rv">
+      <a class="btn btn-primary" href="mailto:hello@mut.camp?subject=MUT%20In-Company%20%E2%80%94%20intro%20call">Book an intro call <span class="arr">→</span></a>
+      <span class="teams-mail">German or English — same price. Custom pricing per team; we reply within 48 hours.</span>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PRICING + APPLY ============ -->
 <section class="section" id="apply">
   <div class="container">
     <div class="section-head center rv">
-      <span class="eyebrow">06 · Apply</span>
+      <span class="eyebrow">07 · Apply</span>
       <h2 class="h2">One price. <em>Everything</em> in.</h2>
       <p class="lede">Cohort 03 · 19 January – 27 February 2027 · 12 seats. Applications close 15 December 2026.</p>
     </div>
@@ -689,7 +735,7 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
 <section class="section" id="faq">
   <div class="container">
     <div class="section-head center rv">
-      <span class="eyebrow">07 · FAQ</span>
+      <span class="eyebrow">08 · FAQ</span>
       <h2 class="h2">Fair questions. <em>Direct answers.</em></h2>
     </div>
     <div class="faq-list">
@@ -741,6 +787,7 @@ footer.site{background:#1A1510;color:rgba(246,239,230,.55);padding:34px 0;font-s
       <a href="#curriculum">Curriculum</a>
       <a href="#faq">FAQ</a>
       <a href="#apply">Apply</a>
+      <a href="#teams">For Teams</a>
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
     </nav>
