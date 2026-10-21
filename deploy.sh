@@ -11,7 +11,7 @@ cd "$(dirname "$0")"
 
 # --- 1. Who are you? ---
 USER=$(curl -s -H "$AUTH" $API/user | python3 -c "import sys,json; print(json.load(sys.stdin)['login'])")
-REPO="foundher"
+REPO="mut"
 echo "✓ GitHub user: $USER"
 
 # --- 2. Create repo if it doesn't exist ---

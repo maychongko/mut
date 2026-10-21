@@ -2,7 +2,7 @@
 
 Landing page for MUT — a 6-week, all-genders entrepreneurship bootcamp for first-time founders in Germany.
 
-**Live site:** https://maychongko.github.io/foundher/
+**Live site:** https://maychongko.github.io/mut/
 
 ## Edit workflow
 The whole site is one file: `index.html` (design, content, logic — no build step).
